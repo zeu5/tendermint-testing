@@ -1,0 +1,21 @@
+proxy-app = "kvstore"
+log-level = "debug"
+
+[p2p]
+test-intercept = true
+controller-master-addr = "10.0.0.8:7074"
+controller-listen-addr = "0.0.0.0:8080"
+
+[consensus]
+create-empty-blocks = false
+timeout-propose = "2s"
+timeout-prevote = "3s"
+timeout-precommit = "3s"
+
+
+[rpc]
+laddr = "tcp://0.0.0.0:26657"
+pprof-laddr = ":6060"
+
+[instrumentation]
+prometheus = false
