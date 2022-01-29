@@ -1,0 +1,70 @@
+{
+	"key": "25cab13d643286db2e33d179",
+	"addrs": [
+		{
+			"addr": {
+				"id": "f0d0431ee9e6a2ab2108fa303535cee1edc189c0",
+				"ip": "192.167.10.2",
+				"port": 26656
+			},
+			"src": {
+				"id": "b970567c19373fe3d60e120da5a569f82d563a81",
+				"ip": "::",
+				"port": 26656
+			},
+			"buckets": [
+				175,
+				129,
+				219
+			],
+			"attempts": 0,
+			"bucket_type": 1,
+			"last_attempt": "2022-01-25T16:32:05.427281508Z",
+			"last_success": "0001-01-01T00:00:00Z",
+			"last_ban_time": "0001-01-01T00:00:00Z"
+		},
+		{
+			"addr": {
+				"id": "438336252eb39e4c357fdde10e96adc5acb8891e",
+				"ip": "192.167.10.4",
+				"port": 26656
+			},
+			"src": {
+				"id": "b970567c19373fe3d60e120da5a569f82d563a81",
+				"ip": "::",
+				"port": 26656
+			},
+			"buckets": [
+				175,
+				129
+			],
+			"attempts": 0,
+			"bucket_type": 1,
+			"last_attempt": "2022-01-25T16:32:05.499393758Z",
+			"last_success": "0001-01-01T00:00:00Z",
+			"last_ban_time": "0001-01-01T00:00:00Z"
+		},
+		{
+			"addr": {
+				"id": "cf3ebf8ef7f1df57df9432a11ba8b546de5387c2",
+				"ip": "192.167.10.5",
+				"port": 26656
+			},
+			"src": {
+				"id": "b970567c19373fe3d60e120da5a569f82d563a81",
+				"ip": "::",
+				"port": 26656
+			},
+			"buckets": [
+				175,
+				129,
+				219
+			],
+			"attempts": 0,
+			"bucket_type": 1,
+			"last_attempt": "2022-01-25T16:32:05.499463341Z",
+			"last_success": "0001-01-01T00:00:00Z",
+			"last_ban_time": "0001-01-01T00:00:00Z"
+		}
+	]
+}

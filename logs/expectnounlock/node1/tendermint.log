@@ -1,0 +1,1062 @@
+I[2022-01-20|15:30:37.901] Starting multiAppConn service                module=proxy impl=multiAppConn
+I[2022-01-20|15:30:37.905] Starting localClient service                 module=abci-client connection=query impl=localClient
+I[2022-01-20|15:30:37.905] Starting localClient service                 module=abci-client connection=snapshot impl=localClient
+I[2022-01-20|15:30:37.905] Starting localClient service                 module=abci-client connection=mempool impl=localClient
+I[2022-01-20|15:30:37.906] Starting localClient service                 module=abci-client connection=consensus impl=localClient
+I[2022-01-20|15:30:37.907] Starting EventBus service                    module=events impl=EventBus
+I[2022-01-20|15:30:37.908] Starting PubSub service                      module=pubsub impl=PubSub
+I[2022-01-20|15:30:38.174] Starting IndexerService service              module=txindex impl=IndexerService
+I[2022-01-20|15:30:38.178] ABCI Handshake App Info                      module=consensus height=0 hash= software-version=0.17.0 protocol-version=1
+I[2022-01-20|15:30:38.192] ABCI Replay Blocks                           module=consensus appHeight=0 storeHeight=0 stateHeight=0
+I[2022-01-20|15:30:38.249] Completed ABCI Handshake - Tendermint and App are synced module=consensus appHeight=0 appHash=
+I[2022-01-20|15:30:38.262] Version info                                 module=main software=unreleased-pct-instrumentation-51c94d4408f96a6e318697c2dae6fedc6a65bcbe block=11 p2p=8
+I[2022-01-20|15:30:38.263] This node is a validator                     module=consensus addr=63145AEFE40D5D88B3A7449A294A245CF91862FB pubKey=PubKeyEd25519{02BE596EBDA7C973980A94206C6550B6940429ABBC9062D45F12F3B8D7F1BFF6}
+I[2022-01-20|15:30:38.284] Created transport                            module=main 
+I[2022-01-20|15:30:38.563] P2P Node ID                                  module=p2p ID=15458389558225f03b7d461ac7db71b220155010 file=/tendermint/node1/config/node_key.json
+I[2022-01-20|15:30:38.564] Adding persistent peers                      module=p2p addrs="[53aac1a7619a471bf1ce3ad367ce7b06ae84865c@192.167.10.2:26656 15458389558225f03b7d461ac7db71b220155010@192.167.10.3:26656 789ce20800fcb3f23a5f1412496bc881b6418bcc@192.167.10.4:26656 5255c86ba259d3c93cc93f4ce130f117be0bdc18@192.167.10.5:26656]"
+I[2022-01-20|15:30:38.565] Adding unconditional peer ids                module=p2p ids=[]
+I[2022-01-20|15:30:38.568] Add our address to book                      module=p2p book=/tendermint/node1/config/addrbook.json addr=15458389558225f03b7d461ac7db71b220155010@0.0.0.0:26656
+I[2022-01-20|15:30:38.573] Created node                                 module=main 
+I[2022-01-20|15:30:38.573] Starting node                                module=main 
+I[2022-01-20|15:30:38.573] Starting pprof server                        module=main laddr=:6060
+I[2022-01-20|15:30:38.574] Starting transport                           module=main 
+I[2022-01-20|15:30:38.583] Starting InterceptedTransport service        module=p2p transport=intercepted-transport impl=InterceptedTransport
+I[2022-01-20|15:30:38.583] Starting InterceptRouter service             module=p2p impl=InterceptRouter
+I[2022-01-20|15:30:38.585] Starting MasterController service            module=p2p impl=MasterController
+I[2022-01-20|15:30:38.589] Starting client controller                   module=p2p addr=0.0.0.0:8080
+I[2022-01-20|15:30:39.598] Starting Node service                        module=main impl=Node
+I[2022-01-20|15:30:39.635] Starting RPC HTTP server on [::]:26657       module=rpc-server 
+I[2022-01-20|15:30:39.641] p2p service                                  module=main legacy_enabled=true
+I[2022-01-20|15:30:39.641] Starting P2P Switch service                  module=p2p impl="P2P Switch"
+I[2022-01-20|15:30:39.645] Starting StateSyncShim service               module=statesync impl=StateSyncShim
+I[2022-01-20|15:30:39.651] Starting PEX service                         module=pex impl=PEX
+I[2022-01-20|15:30:39.665] Starting AddrBook service                    module=p2p book=/tendermint/node1/config/addrbook.json impl=AddrBook
+I[2022-01-20|15:30:39.678] Ensure peers                                 module=pex numOutPeers=0 numInPeers=0 numDialing=0 numToDial=10
+I[2022-01-20|15:30:39.679] No addresses to dial. Falling back to seeds  module=pex 
+I[2022-01-20|15:30:39.685] Starting MempoolShim service                 module=mempool impl=MempoolShim
+I[2022-01-20|15:30:39.685] Starting BlockchainShim service              module=blockchain impl=BlockchainShim
+I[2022-01-20|15:30:39.686] Starting ConsensusShim service               module=consensus impl=ConsensusShim
+I[2022-01-20|15:30:39.687] Starting EvidenceShim service                module=evidence impl=EvidenceShim
+I[2022-01-20|15:30:39.687] Starting Blockchain service                  module=blockchain impl=Blockchain
+I[2022-01-20|15:30:39.687] Starting BlockPool service                   module=blockpool impl=BlockPool
+I[2022-01-20|15:30:39.689] Starting Consensus service                   module=consensus impl=ConsensusReactor
+D[2022-01-20|15:30:39.690] consensus wait sync                          module=consensus wait_sync=true
+I[2022-01-20|15:30:39.698] Starting StateSync service                   module=statesync impl=StateSync
+I[2022-01-20|15:30:39.701] Starting Mempool service                     module=mempool impl=Mempool
+I[2022-01-20|15:30:39.704] Starting Evidence service                    module=evidence impl=Evidence
+I[2022-01-20|15:30:39.721] Saving AddrBook to file                      module=p2p book=/tendermint/node1/config/addrbook.json size=3
+D[2022-01-20|15:30:39.768] Ignore attempt to connect to ourselves       module=p2p addr=15458389558225f03b7d461ac7db71b220155010@192.167.10.3:26656 ourAddr=15458389558225f03b7d461ac7db71b220155010@[::]:26656
+I[2022-01-20|15:30:39.773] Started node                                 module=main nodeInfo="{ProtocolVersion:{P2P:8 Block:11 App:1} NodeID:15458389558225f03b7d461ac7db71b220155010 ListenAddr:tcp://0.0.0.0:26656 Network:chain-3b0Zgt Version:unreleased-pct-instrumentation-51c94d4408f96a6e318697c2dae6fedc6a65bcbe Channels:40202122233038606100 Moniker:BB8B60D36009939B Other:{TxIndex:on RPCAddress:tcp://0.0.0.0:26657}}"
+I[2022-01-20|15:30:39.820] Dialing peer                                 module=p2p address=53aac1a7619a471bf1ce3ad367ce7b06ae84865c@192.167.10.2:26656
+I[2022-01-20|15:30:39.903] Dialing peer                                 module=p2p address=789ce20800fcb3f23a5f1412496bc881b6418bcc@192.167.10.4:26656
+I[2022-01-20|15:30:40.047] Starting MConnection service                 module=p2p peer=mconn://53aac1a7619a471bf1ce3ad367ce7b06ae84865c@192.167.10.2:26656 impl=MConn{192.167.10.2:26656}
+I[2022-01-20|15:30:40.073] Starting Peer service                        module=p2p peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c@192.167.10.2:26656 impl="Peer{mconn://192.167.10.2:26656 53aac1a7619a471bf1ce3ad367ce7b06ae84865c out}"
+D[2022-01-20|15:30:40.080] sent peer update                             module=statesync reactor=StateSyncShim peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c status=up
+D[2022-01-20|15:30:40.082] Request addrs                                module=pex from="Peer{mconn://192.167.10.2:26656 53aac1a7619a471bf1ce3ad367ce7b06ae84865c out}"
+D[2022-01-20|15:30:40.091] sent peer update                             module=mempool reactor=MempoolShim peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c status=up
+I[2022-01-20|15:30:40.091] Starting MConnection service                 module=p2p peer=mconn://789ce20800fcb3f23a5f1412496bc881b6418bcc@192.167.10.4:26656 impl=MConn{192.167.10.4:26656}
+I[2022-01-20|15:30:40.096] Starting Peer service                        module=p2p peer=789ce20800fcb3f23a5f1412496bc881b6418bcc@192.167.10.4:26656 impl="Peer{mconn://192.167.10.4:26656 789ce20800fcb3f23a5f1412496bc881b6418bcc out}"
+D[2022-01-20|15:30:40.096] sent peer update                             module=evidence reactor=EvidenceShim peer=789ce20800fcb3f23a5f1412496bc881b6418bcc status=up
+D[2022-01-20|15:30:40.096] received peer update                         module=evidence peer=789ce20800fcb3f23a5f1412496bc881b6418bcc status=up
+D[2022-01-20|15:30:40.092] received peer update                         module=statesync peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c status=up
+D[2022-01-20|15:30:40.097] received peer update                         module=statesync peer=789ce20800fcb3f23a5f1412496bc881b6418bcc status=up
+D[2022-01-20|15:30:40.097] sent peer update                             module=statesync reactor=StateSyncShim peer=789ce20800fcb3f23a5f1412496bc881b6418bcc status=up
+D[2022-01-20|15:30:40.097] Request addrs                                module=pex from="Peer{mconn://192.167.10.4:26656 789ce20800fcb3f23a5f1412496bc881b6418bcc out}"
+D[2022-01-20|15:30:40.105] sent peer update                             module=blockchain reactor=BlockchainShim peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c status=up
+D[2022-01-20|15:30:40.106] sent peer update                             module=consensus reactor=ConsensusShim peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c status=up
+D[2022-01-20|15:30:40.106] sent peer update                             module=evidence reactor=EvidenceShim peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c status=up
+I[2022-01-20|15:30:40.107] Added peer                                   module=p2p peer="Peer{mconn://192.167.10.2:26656 53aac1a7619a471bf1ce3ad367ce7b06ae84865c out}"
+D[2022-01-20|15:30:40.108] received peer update                         module=evidence peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c status=up
+D[2022-01-20|15:30:40.109] received peer update                         module=consensus peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c status=up
+D[2022-01-20|15:30:40.093] received peer update                         module=mempool peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c status=up
+D[2022-01-20|15:30:40.111] received peer update                         module=mempool peer=789ce20800fcb3f23a5f1412496bc881b6418bcc status=up
+D[2022-01-20|15:30:40.117] sent peer update                             module=mempool reactor=MempoolShim peer=789ce20800fcb3f23a5f1412496bc881b6418bcc status=up
+D[2022-01-20|15:30:40.125] received peer update                         module=blockchain peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c status=up
+D[2022-01-20|15:30:40.137] sent peer update                             module=blockchain reactor=BlockchainShim peer=789ce20800fcb3f23a5f1412496bc881b6418bcc status=up
+D[2022-01-20|15:30:40.140] sent peer update                             module=consensus reactor=ConsensusShim peer=789ce20800fcb3f23a5f1412496bc881b6418bcc status=up
+I[2022-01-20|15:30:40.149] Added peer                                   module=p2p peer="Peer{mconn://192.167.10.4:26656 789ce20800fcb3f23a5f1412496bc881b6418bcc out}"
+D[2022-01-20|15:30:40.150] no votes to send; sleeping                   module=consensus peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c rs.Height=1 prs.Height=0 localPV=BA{4:____} peerPV=nil-BitArray localPC=BA{4:____} peerPC=nil-BitArray
+D[2022-01-20|15:30:40.155] received peer update                         module=blockchain peer=789ce20800fcb3f23a5f1412496bc881b6418bcc status=up
+D[2022-01-20|15:30:40.156] received peer update                         module=consensus peer=789ce20800fcb3f23a5f1412496bc881b6418bcc status=up
+D[2022-01-20|15:30:40.203] no votes to send; sleeping                   module=consensus peer=789ce20800fcb3f23a5f1412496bc881b6418bcc rs.Height=1 prs.Height=0 localPV=BA{4:____} peerPV=nil-BitArray localPC=BA{4:____} peerPC=nil-BitArray
+D[2022-01-20|15:30:40.245] proxied envelope                             module=blockchain reactor=BlockchainShim ch_id=64 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:40.248] received message                             module=blockchain message= peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:40.254] Added peer                                   module=blockpool addr=789ce20800fcb3f23a5f1412496bc881b6418bcc height=0
+D[2022-01-20|15:30:40.277] proxied envelope                             module=blockchain reactor=BlockchainShim ch_id=64 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:40.278] received message                             module=blockchain message= peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:40.279] Added peer                                   module=blockpool addr=53aac1a7619a471bf1ce3ad367ce7b06ae84865c height=0
+D[2022-01-20|15:30:40.387] Received message                             module=pex src="Peer{mconn://192.167.10.4:26656 789ce20800fcb3f23a5f1412496bc881b6418bcc out}" chId=0 msg="addresses:<id:\"15458389558225f03b7d461ac7db71b220155010\" ip:\"192.167.10.3\" port:26656 > addresses:<id:\"53aac1a7619a471bf1ce3ad367ce7b06ae84865c\" ip:\"192.167.10.2\" port:26656 > addresses:<id:\"5255c86ba259d3c93cc93f4ce130f117be0bdc18\" ip:\"192.167.10.5\" port:26656 > "
+D[2022-01-20|15:30:40.444] Received message                             module=pex src="Peer{mconn://192.167.10.2:26656 53aac1a7619a471bf1ce3ad367ce7b06ae84865c out}" chId=0 msg="addresses:<id:\"15458389558225f03b7d461ac7db71b220155010\" ip:\"192.167.10.3\" port:26656 > addresses:<id:\"789ce20800fcb3f23a5f1412496bc881b6418bcc\" ip:\"192.167.10.4\" port:26656 > addresses:<id:\"5255c86ba259d3c93cc93f4ce130f117be0bdc18\" ip:\"192.167.10.5\" port:26656 > "
+D[2022-01-20|15:30:40.523] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:40.533] received message                             module=consensus ch_id=32 message="[NewRoundStep H:1 R:0 S:RoundStepNewHeight LCR:-1]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+I[2022-01-20|15:30:40.595] Dialing peer                                 module=p2p address=5255c86ba259d3c93cc93f4ce130f117be0bdc18@192.167.10.5:26656
+I[2022-01-20|15:30:40.652] Starting MConnection service                 module=p2p peer=mconn://5255c86ba259d3c93cc93f4ce130f117be0bdc18@192.167.10.5:26656 impl=MConn{192.167.10.5:26656}
+I[2022-01-20|15:30:40.652] Starting Peer service                        module=p2p peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18@192.167.10.5:26656 impl="Peer{mconn://192.167.10.5:26656 5255c86ba259d3c93cc93f4ce130f117be0bdc18 out}"
+D[2022-01-20|15:30:40.652] Request addrs                                module=pex from="Peer{mconn://192.167.10.5:26656 5255c86ba259d3c93cc93f4ce130f117be0bdc18 out}"
+D[2022-01-20|15:30:40.652] sent peer update                             module=mempool reactor=MempoolShim peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 status=up
+D[2022-01-20|15:30:40.652] sent peer update                             module=blockchain reactor=BlockchainShim peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 status=up
+D[2022-01-20|15:30:40.653] received peer update                         module=mempool peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 status=up
+D[2022-01-20|15:30:40.653] received peer update                         module=blockchain peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 status=up
+D[2022-01-20|15:30:40.658] received peer update                         module=consensus peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 status=up
+D[2022-01-20|15:30:40.662] no votes to send; sleeping                   module=consensus peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 rs.Height=1 prs.Height=0 localPV=BA{4:____} peerPV=nil-BitArray localPC=BA{4:____} peerPC=nil-BitArray
+D[2022-01-20|15:30:40.652] sent peer update                             module=consensus reactor=ConsensusShim peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 status=up
+D[2022-01-20|15:30:40.666] sent peer update                             module=evidence reactor=EvidenceShim peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 status=up
+D[2022-01-20|15:30:40.676] sent peer update                             module=statesync reactor=StateSyncShim peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 status=up
+I[2022-01-20|15:30:40.676] Added peer                                   module=p2p peer="Peer{mconn://192.167.10.5:26656 5255c86ba259d3c93cc93f4ce130f117be0bdc18 out}"
+D[2022-01-20|15:30:40.676] received peer update                         module=statesync peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 status=up
+D[2022-01-20|15:30:40.677] received peer update                         module=evidence peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 status=up
+D[2022-01-20|15:30:40.701] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:40.703] received message                             module=consensus ch_id=32 message="[NewRoundStep H:1 R:0 S:RoundStepNewHeight LCR:-1]" peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:40.732] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:30:40.745] switching to consensus reactor               module=blockchain height=1
+I[2022-01-20|15:30:40.748] Stopping BlockPool service                   module=blockpool impl=BlockPool
+I[2022-01-20|15:30:40.752] switching to consensus                       module=consensus 
+D[2022-01-20|15:30:40.750] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:40.750] received message                             module=consensus ch_id=32 message="[NewRoundStep H:1 R:0 S:RoundStepPropose LCR:-1]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:40.769] ignoring updateToState()                     module=consensus new_height=1 old_height=1
+I[2022-01-20|15:30:40.779] Starting State service                       module=consensus impl=ConsensusState
+D[2022-01-20|15:30:40.782] Broadcast                                    module=p2p channel=32 msgBytes=0A1108011801200128FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:40.796] Sending to peer                              module=p2p peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c msgBytes=0A1108011801200128FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:40.801] Sending to peer                              module=p2p peer=789ce20800fcb3f23a5f1412496bc881b6418bcc msgBytes=0A1108011801200128FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:40.803] Sending to peer                              module=p2p peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 msgBytes=0A1108011801200128FFFFFFFFFFFFFFFFFF01
+I[2022-01-20|15:30:40.847] Starting baseWAL service                     module=consensus wal=/tendermint/node1/data/cs.wal/wal impl=baseWAL
+I[2022-01-20|15:30:40.857] Starting Group service                       module=consensus wal=/tendermint/node1/data/cs.wal/wal impl=Group
+I[2022-01-20|15:30:40.863] Searching for height                         module=consensus wal=/tendermint/node1/data/cs.wal/wal height=1 min=0 max=0
+I[2022-01-20|15:30:40.881] Searching for height                         module=consensus wal=/tendermint/node1/data/cs.wal/wal height=0 min=0 max=0
+I[2022-01-20|15:30:40.886] Found                                        module=consensus wal=/tendermint/node1/data/cs.wal/wal height=0 index=0
+I[2022-01-20|15:30:40.889] Catchup by replaying consensus messages      module=consensus height=1
+I[2022-01-20|15:30:40.889] Replay: Done                                 module=consensus 
+I[2022-01-20|15:30:40.890] Starting TimeoutTicker service               module=consensus impl=TimeoutTicker
+D[2022-01-20|15:30:40.890] Starting timeout routine                     module=consensus 
+D[2022-01-20|15:30:40.892] Received tick                                module=consensus old_ti="{TimeDuration:0s Height:0 Round:0 Step:RoundStepUnknown}" new_ti="{TimeDuration:-1.395195001s Height:1 Round:0 Step:RoundStepNewHeight}"
+D[2022-01-20|15:30:40.893] Timer already stopped                        module=consensus 
+D[2022-01-20|15:30:40.893] Scheduled timeout                            module=consensus dur=-1.395195001s height=1 round=0 step=RoundStepNewHeight
+I[2022-01-20|15:30:40.894] Timed out                                    module=consensus dur=-1.395195001s height=1 round=0 step=RoundStepNewHeight
+D[2022-01-20|15:30:40.899] received tock                                module=consensus timeout=-1.395195001s height=1 round=0 step=RoundStepNewHeight
+D[2022-01-20|15:30:40.903] entering new round                           module=consensus height=1 round=0 current=1/0/RoundStepNewHeight
+D[2022-01-20|15:30:40.911] entering propose step                        module=consensus height=1 round=0 current=1/0/RoundStepNewRound
+D[2022-01-20|15:30:40.911] node is a validator                          module=consensus height=1 round=0
+D[2022-01-20|15:30:40.911] propose step; our turn to propose            module=consensus height=1 round=0 proposer=63145AEFE40D5D88B3A7449A294A245CF91862FB
+D[2022-01-20|15:30:40.913] Received tick                                module=consensus old_ti="{TimeDuration:-1.395195001s Height:1 Round:0 Step:RoundStepNewHeight}" new_ti="{TimeDuration:3s Height:1 Round:0 Step:RoundStepPropose}"
+D[2022-01-20|15:30:40.913] Timer already stopped                        module=consensus 
+D[2022-01-20|15:30:40.916] Scheduled timeout                            module=consensus dur=3s height=1 round=0 step=RoundStepPropose
+D[2022-01-20|15:30:40.921] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:40.921] received message                             module=consensus ch_id=32 message="[NewRoundStep H:1 R:0 S:RoundStepPropose LCR:-1]" peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:40.942] proxied envelope                             module=blockchain reactor=BlockchainShim ch_id=64 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:40.943] received message                             module=blockchain message= peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:40.943] Added peer                                   module=blockpool addr=5255c86ba259d3c93cc93f4ce130f117be0bdc18 height=0
+D[2022-01-20|15:30:40.949] Received message                             module=pex src="Peer{mconn://192.167.10.5:26656 5255c86ba259d3c93cc93f4ce130f117be0bdc18 out}" chId=0 msg="addresses:<id:\"15458389558225f03b7d461ac7db71b220155010\" ip:\"192.167.10.3\" port:26656 > addresses:<id:\"789ce20800fcb3f23a5f1412496bc881b6418bcc\" ip:\"192.167.10.4\" port:26656 > addresses:<id:\"53aac1a7619a471bf1ce3ad367ce7b06ae84865c\" ip:\"192.167.10.2\" port:26656 > "
+I[2022-01-20|15:30:40.997] signed proposal                              module=consensus height=1 round=0 proposal="Proposal{1/0 (2456A7E3374BD5BBD1690CC2DC97D566755847218D741CC7E71361E8E2FCE0C6:1:D6EFEAB94421, -1) 28C20AF5A27E @ 2022-01-20T15:30:40.937361215Z}"
+D[2022-01-20|15:30:40.998] signed proposal block                        module=consensus block="Block{\n  Header{\n    Version:        {11 1}\n    ChainID:        chain-3b0Zgt\n    Height:         1\n    Time:           2022-01-20 15:30:32.052186544 +0000 UTC\n    LastBlockID:    :0:000000000000\n    LastCommit:     E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855\n    Data:           E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855\n    Validators:     73F5C791F945935AF345AD6537DA8B6D1035BADBFD936B1B11B9266F1B142A1C\n    NextValidators: 73F5C791F945935AF345AD6537DA8B6D1035BADBFD936B1B11B9266F1B142A1C\n    App:            \n    Consensus:      048091BC7DDC283F77BFBF91D73C44DA58C3DF8A9CBC867405D8B7F3DAADA22F\n    Results:        E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855\n    Evidence:       E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855\n    Proposer:       63145AEFE40D5D88B3A7449A294A245CF91862FB\n  }#2456A7E3374BD5BBD1690CC2DC97D566755847218D741CC7E71361E8E2FCE0C6\n  Data{\n    \n  }#E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855\n  EvidenceData{\n    \n  }#E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855\n  Commit{\n    Height:     0\n    Round:      0\n    BlockID:    :0:000000000000\n    Signatures:\n      \n  }#E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855\n}#2456A7E3374BD5BBD1690CC2DC97D566755847218D741CC7E71361E8E2FCE0C6"
+D[2022-01-20|15:30:41.011] Broadcast                                    module=p2p channel=32 msgBytes=0A1108011803200128FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:41.011] received message                             module=consensus ch_id=32 message="[NewRoundStep H:1 R:0 S:RoundStepNewHeight LCR:-1]" peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:41.012] Sending to peer                              module=p2p peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c msgBytes=0A1108011803200128FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:41.012] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:41.012] Sending to peer                              module=p2p peer=789ce20800fcb3f23a5f1412496bc881b6418bcc msgBytes=0A1108011803200128FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:41.012] Sending to peer                              module=p2p peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 msgBytes=0A1108011803200128FFFFFFFFFFFFFFFFFF01
+I[2022-01-20|15:30:41.028] received proposal and yet to check           module=consensus proposal="Proposal{1/0 (2456A7E3374BD5BBD1690CC2DC97D566755847218D741CC7E71361E8E2FCE0C6:1:D6EFEAB94421, -1) 28C20AF5A27E @ 2022-01-20T15:30:40.937361215Z}"
+I[2022-01-20|15:30:41.031] received proposal                            module=consensus proposal="Proposal{1/0 (2456A7E3374BD5BBD1690CC2DC97D566755847218D741CC7E71361E8E2FCE0C6:1:D6EFEAB94421, -1) 28C20AF5A27E @ 2022-01-20T15:30:40.937361215Z}"
+I[2022-01-20|15:30:41.050] received complete proposal block             module=consensus height=1 hash=2456A7E3374BD5BBD1690CC2DC97D566755847218D741CC7E71361E8E2FCE0C6
+D[2022-01-20|15:30:41.058] entering prevote step                        module=consensus height=1 round=0 current=1/0/RoundStepPropose
+D[2022-01-20|15:30:41.060] prevote step: ProposalBlock is valid         module=consensus height=1 round=0
+I[2022-01-20|15:30:41.064] Signing vote                                 module=consensus pubkey-addr=63145AEFE40D5D88B3A7449A294A245CF91862FB
+I[2022-01-20|15:30:41.095] signed and pushed vote                       module=consensus height=1 round=0 vote="Vote{0:63145AEFE40D 1/00/SIGNED_MSG_TYPE_PREVOTE(Prevote) 2456A7E3374B 427350384A66 @ 2022-01-20T15:30:41.06435659Z}"
+D[2022-01-20|15:30:41.101] received message                             module=consensus ch_id=32 message="[NewRoundStep H:1 R:0 S:RoundStepPropose LCR:-1]" peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:41.103] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:41.115] Broadcast                                    module=p2p channel=32 msgBytes=0A1108011804200128FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:41.116] Sending to peer                              module=p2p peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c msgBytes=0A1108011804200128FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:41.116] Sending to peer                              module=p2p peer=789ce20800fcb3f23a5f1412496bc881b6418bcc msgBytes=0A1108011804200128FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:41.116] Sending to peer                              module=p2p peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 msgBytes=0A1108011804200128FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:41.118] attempt to update stats for non-existent peer module=consensus peer=
+D[2022-01-20|15:30:41.119] sending proposal                             module=consensus peer=789ce20800fcb3f23a5f1412496bc881b6418bcc height=1 round=0
+D[2022-01-20|15:30:41.120] adding vote                                  module=consensus vote_height=1 vote_type=SIGNED_MSG_TYPE_PREVOTE val_index=0 cs_height=1 block_id="$V\ufffd\ufffd7Kջ\ufffdi\u000c\ufffdܗ\ufffdfuXG!\ufffdt\u001c\ufffd\ufffd\u0013a\ufffd\ufffd\ufffd\ufffd\ufffd" vote_round=0
+D[2022-01-20|15:30:41.128] added vote to prevote                        module=consensus vote="Vote{0:63145AEFE40D 1/00/SIGNED_MSG_TYPE_PREVOTE(Prevote) 2456A7E3374B 427350384A66 @ 2022-01-20T15:30:41.06435659Z}" prevotes="VoteSet{H:1 R:0 T:SIGNED_MSG_TYPE_PREVOTE +2/3:<nil>(0.25) BA{4:x___} map[]}"
+D[2022-01-20|15:30:41.129] sending proposal                             module=consensus peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c height=1 round=0
+D[2022-01-20|15:30:41.130] sending block part                           module=consensus peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c height=1 round=0
+D[2022-01-20|15:30:41.131] sending proposal                             module=consensus peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 height=1 round=0
+D[2022-01-20|15:30:41.131] sending block part                           module=consensus peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 height=1 round=0
+D[2022-01-20|15:30:41.132] Broadcast                                    module=p2p channel=32 msgBytes=3A0408011801
+D[2022-01-20|15:30:41.132] Sending to peer                              module=p2p peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c msgBytes=3A0408011801
+D[2022-01-20|15:30:41.132] Sending to peer                              module=p2p peer=789ce20800fcb3f23a5f1412496bc881b6418bcc msgBytes=3A0408011801
+D[2022-01-20|15:30:41.132] Sending to peer                              module=p2p peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 msgBytes=3A0408011801
+D[2022-01-20|15:30:41.132] attempt to update stats for non-existent peer module=consensus peer=
+D[2022-01-20|15:30:41.134] sending vote message                         module=consensus ps="PeerState{\n  Key        53aac1a7619a471bf1ce3ad367ce7b06ae84865c\n  RoundState PeerRoundState{\n    1/0/RoundStepPropose @2022-01-20 15:30:40.011783215 +0000 UTC\n    Proposal 1:D6EFEAB94421 -> BA{1:x}\n    POL      BA{4:____} (round -1)\n    Prevotes   BA{4:____}\n    Precommits BA{4:____}\n    LastCommit nil-BitArray (round -1)\n    Catchup    BA{4:____} (round -1)\n  }\n  Stats      peerStateStats{votes: 0, blockParts: 0}\n}" vote="Vote{0:63145AEFE40D 1/00/SIGNED_MSG_TYPE_PREVOTE(Prevote) 2456A7E3374B 427350384A66 @ 2022-01-20T15:30:41.06435659Z}"
+D[2022-01-20|15:30:41.139] setHasVote                                   module=consensus peerH/R=1/0 H/R=1/0 type=SIGNED_MSG_TYPE_PREVOTE index=0
+D[2022-01-20|15:30:41.139] picked rs.Prevotes(prs.Round) to send        module=consensus height=1 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c round=0
+D[2022-01-20|15:30:41.139] no votes to send; sleeping                   module=consensus peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c rs.Height=1 prs.Height=1 localPV=BA{4:x___} peerPV=BA{4:x___} localPC=BA{4:____} peerPC=BA{4:____}
+D[2022-01-20|15:30:41.139] sending vote message                         module=consensus ps="PeerState{\n  Key        5255c86ba259d3c93cc93f4ce130f117be0bdc18\n  RoundState PeerRoundState{\n    1/0/RoundStepPropose @2022-01-20 15:30:40.119855298 +0000 UTC\n    Proposal 1:D6EFEAB94421 -> BA{1:x}\n    POL      BA{4:____} (round -1)\n    Prevotes   BA{4:____}\n    Precommits BA{4:____}\n    LastCommit nil-BitArray (round -1)\n    Catchup    BA{4:____} (round -1)\n  }\n  Stats      peerStateStats{votes: 0, blockParts: 0}\n}" vote="Vote{0:63145AEFE40D 1/00/SIGNED_MSG_TYPE_PREVOTE(Prevote) 2456A7E3374B 427350384A66 @ 2022-01-20T15:30:41.06435659Z}"
+D[2022-01-20|15:30:41.140] setHasVote                                   module=consensus peerH/R=1/0 H/R=1/0 type=SIGNED_MSG_TYPE_PREVOTE index=0
+D[2022-01-20|15:30:41.140] picked rs.Prevotes(prs.Round) to send        module=consensus height=1 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 round=0
+D[2022-01-20|15:30:41.140] no votes to send; sleeping                   module=consensus peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 rs.Height=1 prs.Height=1 localPV=BA{4:x___} peerPV=BA{4:x___} localPC=BA{4:____} peerPC=BA{4:____}
+D[2022-01-20|15:30:41.145] sending block part                           module=consensus peer=789ce20800fcb3f23a5f1412496bc881b6418bcc height=1 round=0
+D[2022-01-20|15:30:41.215] sending vote message                         module=consensus ps="PeerState{\n  Key        789ce20800fcb3f23a5f1412496bc881b6418bcc\n  RoundState PeerRoundState{\n    1/0/RoundStepPropose @2022-01-20 15:30:39.770834756 +0000 UTC\n    Proposal 1:D6EFEAB94421 -> BA{1:x}\n    POL      BA{4:____} (round -1)\n    Prevotes   BA{4:____}\n    Precommits BA{4:____}\n    LastCommit nil-BitArray (round -1)\n    Catchup    BA{4:____} (round -1)\n  }\n  Stats      peerStateStats{votes: 0, blockParts: 0}\n}" vote="Vote{0:63145AEFE40D 1/00/SIGNED_MSG_TYPE_PREVOTE(Prevote) 2456A7E3374B 427350384A66 @ 2022-01-20T15:30:41.06435659Z}"
+D[2022-01-20|15:30:41.217] setHasVote                                   module=consensus peerH/R=1/0 H/R=1/0 type=SIGNED_MSG_TYPE_PREVOTE index=0
+D[2022-01-20|15:30:41.226] picked rs.Prevotes(prs.Round) to send        module=consensus height=1 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc round=0
+D[2022-01-20|15:30:41.229] no votes to send; sleeping                   module=consensus peer=789ce20800fcb3f23a5f1412496bc881b6418bcc rs.Height=1 prs.Height=1 localPV=BA{4:x___} peerPV=BA{4:x___} localPC=BA{4:____} peerPC=BA{4:____}
+D[2022-01-20|15:30:41.443] received message                             module=consensus ch_id=32 message="[HasVote VI:0 V:{1/00/SIGNED_MSG_TYPE_PREVOTE}]" peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:41.444] setHasVote                                   module=consensus peerH/R=1/0 H/R=1/0 type=SIGNED_MSG_TYPE_PREVOTE index=0
+D[2022-01-20|15:30:41.454] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:41.475] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:41.476] received message                             module=consensus ch_id=32 message="[HasVote VI:0 V:{1/00/SIGNED_MSG_TYPE_PREVOTE}]" peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:41.477] setHasVote                                   module=consensus peerH/R=1/0 H/R=1/0 type=SIGNED_MSG_TYPE_PREVOTE index=0
+D[2022-01-20|15:30:41.546] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:41.548] received message                             module=consensus ch_id=32 message="[HasVote VI:0 V:{1/00/SIGNED_MSG_TYPE_PREVOTE}]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:41.548] setHasVote                                   module=consensus peerH/R=1/0 H/R=1/0 type=SIGNED_MSG_TYPE_PREVOTE index=0
+D[2022-01-20|15:30:43.684] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:43.684] received message                             module=consensus ch_id=32 message="[NewRoundStep H:1 R:0 S:RoundStepPrevote LCR:-1]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:43.737] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:43.737] received message                             module=consensus ch_id=32 message="[HasVote VI:2 V:{1/00/SIGNED_MSG_TYPE_PREVOTE}]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:43.737] setHasVote                                   module=consensus peerH/R=1/0 H/R=1/0 type=SIGNED_MSG_TYPE_PREVOTE index=2
+D[2022-01-20|15:30:43.883] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:43.883] received message                             module=consensus ch_id=32 message="[NewRoundStep H:1 R:0 S:RoundStepPrevote LCR:-1]" peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:43.910] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:43.910] received message                             module=consensus ch_id=32 message="[HasVote VI:1 V:{1/00/SIGNED_MSG_TYPE_PREVOTE}]" peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:43.912] setHasVote                                   module=consensus peerH/R=1/0 H/R=1/0 type=SIGNED_MSG_TYPE_PREVOTE index=1
+I[2022-01-20|15:30:43.914] Timed out                                    module=consensus dur=3s height=1 round=0 step=RoundStepPropose
+D[2022-01-20|15:30:43.914] received tock                                module=consensus timeout=3s height=1 round=0 step=RoundStepPropose
+D[2022-01-20|15:30:43.914] ignoring tock because we are ahead           module=consensus height=1 round=0 step=RoundStepPrevote
+D[2022-01-20|15:30:43.980] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=34 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:43.981] received message                             module=consensus ch_id=34 message="[Vote Vote{1:A3BFEF2477F9 1/00/SIGNED_MSG_TYPE_PREVOTE(Prevote) 000000000000 CB4E7FCF3D93 @ 2022-01-20T15:30:43.818086883Z}]" peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:43.981] setHasVote                                   module=consensus peerH/R=1/0 H/R=1/0 type=SIGNED_MSG_TYPE_PREVOTE index=1
+D[2022-01-20|15:30:43.982] Received vote                                module=consensus peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c ch_id=VoteChannel type=SIGNED_MSG_TYPE_PREVOTE block_id=
+D[2022-01-20|15:30:43.982] adding vote                                  module=consensus vote_height=1 vote_type=SIGNED_MSG_TYPE_PREVOTE val_index=1 cs_height=1 block_id= vote_round=0
+D[2022-01-20|15:30:43.983] added vote to prevote                        module=consensus vote="Vote{1:A3BFEF2477F9 1/00/SIGNED_MSG_TYPE_PREVOTE(Prevote) 000000000000 CB4E7FCF3D93 @ 2022-01-20T15:30:43.818086883Z}" prevotes="VoteSet{H:1 R:0 T:SIGNED_MSG_TYPE_PREVOTE +2/3:<nil>(0.5) BA{4:xx__} map[]}"
+D[2022-01-20|15:30:43.983] Broadcast                                    module=p2p channel=32 msgBytes=3A06080118012001
+D[2022-01-20|15:30:43.983] Sending to peer                              module=p2p peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c msgBytes=3A06080118012001
+D[2022-01-20|15:30:43.983] Sending to peer                              module=p2p peer=789ce20800fcb3f23a5f1412496bc881b6418bcc msgBytes=3A06080118012001
+D[2022-01-20|15:30:43.983] Sending to peer                              module=p2p peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 msgBytes=3A06080118012001
+D[2022-01-20|15:30:44.065] sending vote message                         module=consensus ps="PeerState{\n  Key        789ce20800fcb3f23a5f1412496bc881b6418bcc\n  RoundState PeerRoundState{\n    1/0/RoundStepPrevote @2022-01-20 15:30:39.684598341 +0000 UTC\n    Proposal 1:D6EFEAB94421 -> BA{1:x}\n    POL      BA{4:____} (round -1)\n    Prevotes   BA{4:x_x_}\n    Precommits BA{4:____}\n    LastCommit nil-BitArray (round -1)\n    Catchup    BA{4:____} (round -1)\n  }\n  Stats      peerStateStats{votes: 0, blockParts: 0}\n}" vote="Vote{1:A3BFEF2477F9 1/00/SIGNED_MSG_TYPE_PREVOTE(Prevote) 000000000000 CB4E7FCF3D93 @ 2022-01-20T15:30:43.818086883Z}"
+D[2022-01-20|15:30:44.066] setHasVote                                   module=consensus peerH/R=1/0 H/R=1/0 type=SIGNED_MSG_TYPE_PREVOTE index=1
+D[2022-01-20|15:30:44.070] picked rs.Prevotes(prs.Round) to send        module=consensus height=1 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc round=0
+D[2022-01-20|15:30:44.071] no votes to send; sleeping                   module=consensus peer=789ce20800fcb3f23a5f1412496bc881b6418bcc rs.Height=1 prs.Height=1 localPV=BA{4:xx__} peerPV=BA{4:xxx_} localPC=BA{4:____} peerPC=BA{4:____}
+D[2022-01-20|15:30:44.073] sending vote message                         module=consensus ps="PeerState{\n  Key        5255c86ba259d3c93cc93f4ce130f117be0bdc18\n  RoundState PeerRoundState{\n    1/0/RoundStepPropose @2022-01-20 15:30:40.119855298 +0000 UTC\n    Proposal 1:D6EFEAB94421 -> BA{1:x}\n    POL      BA{4:____} (round -1)\n    Prevotes   BA{4:x___}\n    Precommits BA{4:____}\n    LastCommit nil-BitArray (round -1)\n    Catchup    BA{4:____} (round -1)\n  }\n  Stats      peerStateStats{votes: 0, blockParts: 0}\n}" vote="Vote{1:A3BFEF2477F9 1/00/SIGNED_MSG_TYPE_PREVOTE(Prevote) 000000000000 CB4E7FCF3D93 @ 2022-01-20T15:30:43.818086883Z}"
+D[2022-01-20|15:30:44.073] setHasVote                                   module=consensus peerH/R=1/0 H/R=1/0 type=SIGNED_MSG_TYPE_PREVOTE index=1
+D[2022-01-20|15:30:44.073] picked rs.Prevotes(prs.Round) to send        module=consensus height=1 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 round=0
+D[2022-01-20|15:30:44.073] no votes to send; sleeping                   module=consensus peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 rs.Height=1 prs.Height=1 localPV=BA{4:xx__} peerPV=BA{4:xx__} localPC=BA{4:____} peerPC=BA{4:____}
+D[2022-01-20|15:30:44.153] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:44.154] received message                             module=consensus ch_id=32 message="[HasVote VI:1 V:{1/00/SIGNED_MSG_TYPE_PREVOTE}]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:44.158] setHasVote                                   module=consensus peerH/R=1/0 H/R=1/0 type=SIGNED_MSG_TYPE_PREVOTE index=1
+D[2022-01-20|15:30:44.168] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:44.169] received message                             module=consensus ch_id=32 message="[NewRoundStep H:1 R:0 S:RoundStepPrevoteWait LCR:-1]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:44.221] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:44.221] received message                             module=consensus ch_id=32 message="[NewRoundStep H:1 R:0 S:RoundStepPrevote LCR:-1]" peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:44.319] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:44.321] received message                             module=consensus ch_id=32 message="[HasVote VI:3 V:{1/00/SIGNED_MSG_TYPE_PREVOTE}]" peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:44.322] setHasVote                                   module=consensus peerH/R=1/0 H/R=1/0 type=SIGNED_MSG_TYPE_PREVOTE index=3
+D[2022-01-20|15:30:44.396] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:44.397] received message                             module=consensus ch_id=32 message="[HasVote VI:1 V:{1/00/SIGNED_MSG_TYPE_PREVOTE}]" peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:44.398] setHasVote                                   module=consensus peerH/R=1/0 H/R=1/0 type=SIGNED_MSG_TYPE_PREVOTE index=1
+D[2022-01-20|15:30:44.411] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=34 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:44.411] received message                             module=consensus ch_id=34 message="[Vote Vote{3:F61B45CED157 1/00/SIGNED_MSG_TYPE_PREVOTE(Prevote) 000000000000 3E2D464E0D74 @ 2022-01-20T15:30:43.988862841Z}]" peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:44.412] setHasVote                                   module=consensus peerH/R=1/0 H/R=1/0 type=SIGNED_MSG_TYPE_PREVOTE index=3
+D[2022-01-20|15:30:44.412] Received vote                                module=consensus peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 ch_id=VoteChannel type=SIGNED_MSG_TYPE_PREVOTE block_id=
+D[2022-01-20|15:30:44.413] adding vote                                  module=consensus vote_height=1 vote_type=SIGNED_MSG_TYPE_PREVOTE val_index=3 cs_height=1 block_id= vote_round=0
+D[2022-01-20|15:30:44.422] Broadcast                                    module=p2p channel=32 msgBytes=3A06080118012003
+D[2022-01-20|15:30:44.422] Sending to peer                              module=p2p peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c msgBytes=3A06080118012003
+D[2022-01-20|15:30:44.422] Sending to peer                              module=p2p peer=789ce20800fcb3f23a5f1412496bc881b6418bcc msgBytes=3A06080118012003
+D[2022-01-20|15:30:44.422] Sending to peer                              module=p2p peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 msgBytes=3A06080118012003
+D[2022-01-20|15:30:44.424] added vote to prevote                        module=consensus vote="Vote{3:F61B45CED157 1/00/SIGNED_MSG_TYPE_PREVOTE(Prevote) 000000000000 3E2D464E0D74 @ 2022-01-20T15:30:43.988862841Z}" prevotes="VoteSet{H:1 R:0 T:SIGNED_MSG_TYPE_PREVOTE +2/3:<nil>(0.75) BA{4:xx_x} map[]}"
+D[2022-01-20|15:30:44.455] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:44.454] entering prevote wait step                   module=consensus height=1 round=0 current=1/0/RoundStepPrevote
+D[2022-01-20|15:30:44.457] received message                             module=consensus ch_id=32 message="[NewRoundStep H:1 R:0 S:RoundStepPrevoteWait LCR:-1]" peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:44.458] Received tick                                module=consensus old_ti="{TimeDuration:3s Height:1 Round:0 Step:RoundStepPropose}" new_ti="{TimeDuration:3s Height:1 Round:0 Step:RoundStepPrevoteWait}"
+D[2022-01-20|15:30:44.471] Timer already stopped                        module=consensus 
+D[2022-01-20|15:30:44.471] Scheduled timeout                            module=consensus dur=3s height=1 round=0 step=RoundStepPrevoteWait
+D[2022-01-20|15:30:44.490] sending vote message                         module=consensus ps="PeerState{\n  Key        789ce20800fcb3f23a5f1412496bc881b6418bcc\n  RoundState PeerRoundState{\n    1/0/RoundStepPrevoteWait @2022-01-20 15:30:40.169169174 +0000 UTC\n    Proposal 1:D6EFEAB94421 -> BA{1:x}\n    POL      BA{4:____} (round -1)\n    Prevotes   BA{4:xxx_}\n    Precommits BA{4:____}\n    LastCommit nil-BitArray (round -1)\n    Catchup    BA{4:____} (round -1)\n  }\n  Stats      peerStateStats{votes: 0, blockParts: 0}\n}" vote="Vote{3:F61B45CED157 1/00/SIGNED_MSG_TYPE_PREVOTE(Prevote) 000000000000 3E2D464E0D74 @ 2022-01-20T15:30:43.988862841Z}"
+D[2022-01-20|15:30:44.491] Broadcast                                    module=p2p channel=32 msgBytes=0A1108011805200428FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:44.491] Sending to peer                              module=p2p peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c msgBytes=0A1108011805200428FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:44.496] Sending to peer                              module=p2p peer=789ce20800fcb3f23a5f1412496bc881b6418bcc msgBytes=0A1108011805200428FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:44.491] setHasVote                                   module=consensus peerH/R=1/0 H/R=1/0 type=SIGNED_MSG_TYPE_PREVOTE index=3
+D[2022-01-20|15:30:44.496] Sending to peer                              module=p2p peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 msgBytes=0A1108011805200428FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:44.496] picked rs.Prevotes(prs.Round) to send        module=consensus height=1 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc round=0
+D[2022-01-20|15:30:44.496] no votes to send; sleeping                   module=consensus peer=789ce20800fcb3f23a5f1412496bc881b6418bcc rs.Height=1 prs.Height=1 localPV=BA{4:xx_x} peerPV=BA{4:xxxx} localPC=BA{4:____} peerPC=BA{4:____}
+D[2022-01-20|15:30:44.491] sending vote message                         module=consensus ps="PeerState{\n  Key        53aac1a7619a471bf1ce3ad367ce7b06ae84865c\n  RoundState PeerRoundState{\n    1/0/RoundStepPrevote @2022-01-20 15:30:39.883304549 +0000 UTC\n    Proposal 1:D6EFEAB94421 -> BA{1:x}\n    POL      BA{4:____} (round -1)\n    Prevotes   BA{4:xx__}\n    Precommits BA{4:____}\n    LastCommit nil-BitArray (round -1)\n    Catchup    BA{4:____} (round -1)\n  }\n  Stats      peerStateStats{votes: 1, blockParts: 0}\n}" vote="Vote{3:F61B45CED157 1/00/SIGNED_MSG_TYPE_PREVOTE(Prevote) 000000000000 3E2D464E0D74 @ 2022-01-20T15:30:43.988862841Z}"
+D[2022-01-20|15:30:44.496] setHasVote                                   module=consensus peerH/R=1/0 H/R=1/0 type=SIGNED_MSG_TYPE_PREVOTE index=3
+D[2022-01-20|15:30:44.496] picked rs.Prevotes(prs.Round) to send        module=consensus height=1 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c round=0
+D[2022-01-20|15:30:44.497] no votes to send; sleeping                   module=consensus peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c rs.Height=1 prs.Height=1 localPV=BA{4:xx_x} peerPV=BA{4:xx_x} localPC=BA{4:____} peerPC=BA{4:____}
+D[2022-01-20|15:30:44.492] received message                             module=consensus ch_id=32 message="[HasVote VI:3 V:{1/00/SIGNED_MSG_TYPE_PREVOTE}]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:44.497] setHasVote                                   module=consensus peerH/R=1/0 H/R=1/0 type=SIGNED_MSG_TYPE_PREVOTE index=3
+D[2022-01-20|15:30:44.492] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:44.634] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:44.635] received message                             module=consensus ch_id=32 message="[NewRoundStep H:1 R:0 S:RoundStepPrecommit LCR:-1]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:44.657] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:44.657] received message                             module=consensus ch_id=32 message="[HasVote VI:2 V:{1/00/SIGNED_MSG_TYPE_PRECOMMIT}]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:44.657] setHasVote                                   module=consensus peerH/R=1/0 H/R=1/0 type=SIGNED_MSG_TYPE_PRECOMMIT index=2
+D[2022-01-20|15:30:44.667] received message                             module=consensus ch_id=32 message="[HasVote VI:3 V:{1/00/SIGNED_MSG_TYPE_PREVOTE}]" peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:44.667] setHasVote                                   module=consensus peerH/R=1/0 H/R=1/0 type=SIGNED_MSG_TYPE_PREVOTE index=3
+D[2022-01-20|15:30:44.666] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:44.719] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=34 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:44.720] received message                             module=consensus ch_id=34 message="[Vote Vote{3:F61B45CED157 1/00/SIGNED_MSG_TYPE_PREVOTE(Prevote) 000000000000 3E2D464E0D74 @ 2022-01-20T15:30:43.988862841Z}]" peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:44.727] setHasVote                                   module=consensus peerH/R=1/0 H/R=1/0 type=SIGNED_MSG_TYPE_PREVOTE index=3
+D[2022-01-20|15:30:44.727] Received vote                                module=consensus peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c ch_id=VoteChannel type=SIGNED_MSG_TYPE_PREVOTE block_id=
+D[2022-01-20|15:30:44.727] received message                             module=consensus ch_id=34 message="[Vote Vote{3:F61B45CED157 1/00/SIGNED_MSG_TYPE_PREVOTE(Prevote) 000000000000 3E2D464E0D74 @ 2022-01-20T15:30:43.988862841Z}]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:44.728] setHasVote                                   module=consensus peerH/R=1/0 H/R=1/0 type=SIGNED_MSG_TYPE_PREVOTE index=3
+D[2022-01-20|15:30:44.728] Received vote                                module=consensus peer=789ce20800fcb3f23a5f1412496bc881b6418bcc ch_id=VoteChannel type=SIGNED_MSG_TYPE_PREVOTE block_id=
+D[2022-01-20|15:30:44.728] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=34 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:44.728] adding vote                                  module=consensus vote_height=1 vote_type=SIGNED_MSG_TYPE_PREVOTE val_index=3 cs_height=1 block_id= vote_round=0
+D[2022-01-20|15:30:44.728] adding vote                                  module=consensus vote_height=1 vote_type=SIGNED_MSG_TYPE_PREVOTE val_index=3 cs_height=1 block_id= vote_round=0
+D[2022-01-20|15:30:44.754] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:44.755] received message                             module=consensus ch_id=32 message="[NewRoundStep H:1 R:0 S:RoundStepPrevoteWait LCR:-1]" peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:46.148] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:46.149] received message                             module=consensus ch_id=32 message="[VSM23 1/00/SIGNED_MSG_TYPE_PREVOTE :0:000000000000]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:47.286] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:47.286] received message                             module=consensus ch_id=32 message="[NewRoundStep H:1 R:0 S:RoundStepPrecommit LCR:-1]" peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:47.314] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:47.314] received message                             module=consensus ch_id=32 message="[HasVote VI:3 V:{1/00/SIGNED_MSG_TYPE_PRECOMMIT}]" peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:47.315] setHasVote                                   module=consensus peerH/R=1/0 H/R=1/0 type=SIGNED_MSG_TYPE_PRECOMMIT index=3
+D[2022-01-20|15:30:47.328] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=34 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:47.330] received message                             module=consensus ch_id=34 message="[Vote Vote{3:F61B45CED157 1/00/SIGNED_MSG_TYPE_PRECOMMIT(Precommit) 000000000000 95FDFC332B62 @ 2022-01-20T15:30:47.131221759Z}]" peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:47.331] setHasVote                                   module=consensus peerH/R=1/0 H/R=1/0 type=SIGNED_MSG_TYPE_PRECOMMIT index=3
+D[2022-01-20|15:30:47.331] Received vote                                module=consensus peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 ch_id=VoteChannel type=SIGNED_MSG_TYPE_PRECOMMIT block_id=
+D[2022-01-20|15:30:47.331] adding vote                                  module=consensus vote_height=1 vote_type=SIGNED_MSG_TYPE_PRECOMMIT val_index=3 cs_height=1 block_id= vote_round=0
+I[2022-01-20|15:30:47.333] added vote to precommit                      module=consensus vote="Vote{3:F61B45CED157 1/00/SIGNED_MSG_TYPE_PRECOMMIT(Precommit) 000000000000 95FDFC332B62 @ 2022-01-20T15:30:47.131221759Z}" precommits="VoteSet{H:1 R:0 T:SIGNED_MSG_TYPE_PRECOMMIT +2/3:<nil>(0.25) BA{4:___x} map[]}"
+D[2022-01-20|15:30:47.334] Broadcast                                    module=p2p channel=32 msgBytes=3A06080118022003
+D[2022-01-20|15:30:47.334] Sending to peer                              module=p2p peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c msgBytes=3A06080118022003
+D[2022-01-20|15:30:47.334] Sending to peer                              module=p2p peer=789ce20800fcb3f23a5f1412496bc881b6418bcc msgBytes=3A06080118022003
+D[2022-01-20|15:30:47.334] Sending to peer                              module=p2p peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 msgBytes=3A06080118022003
+D[2022-01-20|15:30:47.383] received message                             module=consensus ch_id=32 message="[HasVote VI:3 V:{1/00/SIGNED_MSG_TYPE_PRECOMMIT}]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:47.383] setHasVote                                   module=consensus peerH/R=1/0 H/R=1/0 type=SIGNED_MSG_TYPE_PRECOMMIT index=3
+D[2022-01-20|15:30:47.384] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:47.421] sending vote message                         module=consensus ps="PeerState{\n  Key        53aac1a7619a471bf1ce3ad367ce7b06ae84865c\n  RoundState PeerRoundState{\n    1/0/RoundStepPrevoteWait @2022-01-20 15:30:39.75605055 +0000 UTC\n    Proposal 1:D6EFEAB94421 -> BA{1:x}\n    POL      BA{4:____} (round -1)\n    Prevotes   BA{4:xx_x}\n    Precommits BA{4:____}\n    LastCommit nil-BitArray (round -1)\n    Catchup    BA{4:____} (round -1)\n  }\n  Stats      peerStateStats{votes: 1, blockParts: 0}\n}" vote="Vote{3:F61B45CED157 1/00/SIGNED_MSG_TYPE_PRECOMMIT(Precommit) 000000000000 95FDFC332B62 @ 2022-01-20T15:30:47.131221759Z}"
+D[2022-01-20|15:30:47.422] setHasVote                                   module=consensus peerH/R=1/0 H/R=1/0 type=SIGNED_MSG_TYPE_PRECOMMIT index=3
+D[2022-01-20|15:30:47.422] picked rs.Precommits(prs.Round) to send      module=consensus height=1 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c round=0
+D[2022-01-20|15:30:47.422] no votes to send; sleeping                   module=consensus peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c rs.Height=1 prs.Height=1 localPV=BA{4:xx_x} peerPV=BA{4:xx_x} localPC=BA{4:___x} peerPC=BA{4:___x}
+D[2022-01-20|15:30:47.437] received message                             module=consensus ch_id=32 message="[HasVote VI:3 V:{1/00/SIGNED_MSG_TYPE_PRECOMMIT}]" peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:47.437] setHasVote                                   module=consensus peerH/R=1/0 H/R=1/0 type=SIGNED_MSG_TYPE_PRECOMMIT index=3
+D[2022-01-20|15:30:47.437] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:47.458] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=34 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:47.461] received message                             module=consensus ch_id=34 message="[Vote Vote{3:F61B45CED157 1/00/SIGNED_MSG_TYPE_PRECOMMIT(Precommit) 000000000000 95FDFC332B62 @ 2022-01-20T15:30:47.131221759Z}]" peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:47.461] setHasVote                                   module=consensus peerH/R=1/0 H/R=1/0 type=SIGNED_MSG_TYPE_PRECOMMIT index=3
+D[2022-01-20|15:30:47.461] Received vote                                module=consensus peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c ch_id=VoteChannel type=SIGNED_MSG_TYPE_PRECOMMIT block_id=
+D[2022-01-20|15:30:47.461] adding vote                                  module=consensus vote_height=1 vote_type=SIGNED_MSG_TYPE_PRECOMMIT val_index=3 cs_height=1 block_id= vote_round=0
+I[2022-01-20|15:30:47.473] Timed out                                    module=consensus dur=3s height=1 round=0 step=RoundStepPrevoteWait
+D[2022-01-20|15:30:47.474] received tock                                module=consensus timeout=3s height=1 round=0 step=RoundStepPrevoteWait
+D[2022-01-20|15:30:47.478] entering precommit step                      module=consensus height=1 round=0 current=1/0/RoundStepPrevoteWait
+D[2022-01-20|15:30:47.478] precommit step; no +2/3 prevotes during enterPrecommit; precommitting nil module=consensus height=1 round=0
+I[2022-01-20|15:30:47.480] Signing vote                                 module=consensus pubkey-addr=63145AEFE40D5D88B3A7449A294A245CF91862FB
+I[2022-01-20|15:30:47.497] signed and pushed vote                       module=consensus height=1 round=0 vote="Vote{0:63145AEFE40D 1/00/SIGNED_MSG_TYPE_PRECOMMIT(Precommit) 000000000000 7A58B1EE70D3 @ 2022-01-20T15:30:47.480628884Z}"
+D[2022-01-20|15:30:47.503] Broadcast                                    module=p2p channel=32 msgBytes=0A1108011806200828FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:47.503] Sending to peer                              module=p2p peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c msgBytes=0A1108011806200828FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:47.503] Sending to peer                              module=p2p peer=789ce20800fcb3f23a5f1412496bc881b6418bcc msgBytes=0A1108011806200828FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:47.503] Sending to peer                              module=p2p peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 msgBytes=0A1108011806200828FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:47.509] adding vote                                  module=consensus vote_height=1 vote_type=SIGNED_MSG_TYPE_PRECOMMIT val_index=0 cs_height=1 block_id= vote_round=0
+I[2022-01-20|15:30:47.511] added vote to precommit                      module=consensus vote="Vote{0:63145AEFE40D 1/00/SIGNED_MSG_TYPE_PRECOMMIT(Precommit) 000000000000 7A58B1EE70D3 @ 2022-01-20T15:30:47.480628884Z}" precommits="VoteSet{H:1 R:0 T:SIGNED_MSG_TYPE_PRECOMMIT +2/3:<nil>(0.5) BA{4:x__x} map[]}"
+D[2022-01-20|15:30:47.511] attempt to update stats for non-existent peer module=consensus peer=
+D[2022-01-20|15:30:47.511] Broadcast                                    module=p2p channel=32 msgBytes=3A0408011802
+D[2022-01-20|15:30:47.511] Sending to peer                              module=p2p peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c msgBytes=3A0408011802
+D[2022-01-20|15:30:47.511] Sending to peer                              module=p2p peer=789ce20800fcb3f23a5f1412496bc881b6418bcc msgBytes=3A0408011802
+D[2022-01-20|15:30:47.511] Sending to peer                              module=p2p peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 msgBytes=3A0408011802
+D[2022-01-20|15:30:47.523] sending vote message                         module=consensus ps="PeerState{\n  Key        53aac1a7619a471bf1ce3ad367ce7b06ae84865c\n  RoundState PeerRoundState{\n    1/0/RoundStepPrevoteWait @2022-01-20 15:30:39.75605055 +0000 UTC\n    Proposal 1:D6EFEAB94421 -> BA{1:x}\n    POL      BA{4:____} (round -1)\n    Prevotes   BA{4:xx_x}\n    Precommits BA{4:___x}\n    LastCommit nil-BitArray (round -1)\n    Catchup    BA{4:____} (round -1)\n  }\n  Stats      peerStateStats{votes: 1, blockParts: 0}\n}" vote="Vote{0:63145AEFE40D 1/00/SIGNED_MSG_TYPE_PRECOMMIT(Precommit) 000000000000 7A58B1EE70D3 @ 2022-01-20T15:30:47.480628884Z}"
+D[2022-01-20|15:30:47.525] setHasVote                                   module=consensus peerH/R=1/0 H/R=1/0 type=SIGNED_MSG_TYPE_PRECOMMIT index=0
+D[2022-01-20|15:30:47.525] picked rs.Precommits(prs.Round) to send      module=consensus height=1 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c round=0
+D[2022-01-20|15:30:47.526] sending vote message                         module=consensus ps="PeerState{\n  Key        789ce20800fcb3f23a5f1412496bc881b6418bcc\n  RoundState PeerRoundState{\n    1/0/RoundStepPrecommit @2022-01-20 15:30:39.635329383 +0000 UTC\n    Proposal 1:D6EFEAB94421 -> BA{1:x}\n    POL      BA{4:____} (round -1)\n    Prevotes   BA{4:xxxx}\n    Precommits BA{4:__xx}\n    LastCommit nil-BitArray (round -1)\n    Catchup    BA{4:____} (round -1)\n  }\n  Stats      peerStateStats{votes: 0, blockParts: 0}\n}" vote="Vote{0:63145AEFE40D 1/00/SIGNED_MSG_TYPE_PRECOMMIT(Precommit) 000000000000 7A58B1EE70D3 @ 2022-01-20T15:30:47.480628884Z}"
+D[2022-01-20|15:30:47.527] sending vote message                         module=consensus ps="PeerState{\n  Key        5255c86ba259d3c93cc93f4ce130f117be0bdc18\n  RoundState PeerRoundState{\n    1/0/RoundStepPrecommit @2022-01-20 15:30:40.286930718 +0000 UTC\n    Proposal 1:D6EFEAB94421 -> BA{1:x}\n    POL      BA{4:____} (round -1)\n    Prevotes   BA{4:xx_x}\n    Precommits BA{4:___x}\n    LastCommit nil-BitArray (round -1)\n    Catchup    BA{4:____} (round -1)\n  }\n  Stats      peerStateStats{votes: 2, blockParts: 0}\n}" vote="Vote{0:63145AEFE40D 1/00/SIGNED_MSG_TYPE_PRECOMMIT(Precommit) 000000000000 7A58B1EE70D3 @ 2022-01-20T15:30:47.480628884Z}"
+D[2022-01-20|15:30:47.527] setHasVote                                   module=consensus peerH/R=1/0 H/R=1/0 type=SIGNED_MSG_TYPE_PRECOMMIT index=0
+D[2022-01-20|15:30:47.527] picked rs.Precommits(prs.Round) to send      module=consensus height=1 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 round=0
+D[2022-01-20|15:30:47.527] no votes to send; sleeping                   module=consensus peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 rs.Height=1 prs.Height=1 localPV=BA{4:xx_x} peerPV=BA{4:xx_x} localPC=BA{4:x__x} peerPC=BA{4:x__x}
+D[2022-01-20|15:30:47.528] setHasVote                                   module=consensus peerH/R=1/0 H/R=1/0 type=SIGNED_MSG_TYPE_PRECOMMIT index=0
+D[2022-01-20|15:30:47.528] picked rs.Precommits(prs.Round) to send      module=consensus height=1 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc round=0
+D[2022-01-20|15:30:47.528] no votes to send; sleeping                   module=consensus peer=789ce20800fcb3f23a5f1412496bc881b6418bcc rs.Height=1 prs.Height=1 localPV=BA{4:xx_x} peerPV=BA{4:xxxx} localPC=BA{4:x__x} peerPC=BA{4:x_xx}
+D[2022-01-20|15:30:47.526] no votes to send; sleeping                   module=consensus peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c rs.Height=1 prs.Height=1 localPV=BA{4:xx_x} peerPV=BA{4:xx_x} localPC=BA{4:x__x} peerPC=BA{4:x__x}
+D[2022-01-20|15:30:47.687] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:47.688] received message                             module=consensus ch_id=32 message="[NewRoundStep H:1 R:0 S:RoundStepPrecommit LCR:-1]" peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:47.695] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:47.695] received message                             module=consensus ch_id=32 message="[HasVote VI:0 V:{1/00/SIGNED_MSG_TYPE_PRECOMMIT}]" peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:47.695] setHasVote                                   module=consensus peerH/R=1/0 H/R=1/0 type=SIGNED_MSG_TYPE_PRECOMMIT index=0
+D[2022-01-20|15:30:47.725] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:47.725] received message                             module=consensus ch_id=32 message="[HasVote VI:0 V:{1/00/SIGNED_MSG_TYPE_PRECOMMIT}]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:47.726] setHasVote                                   module=consensus peerH/R=1/0 H/R=1/0 type=SIGNED_MSG_TYPE_PRECOMMIT index=0
+D[2022-01-20|15:30:47.741] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=34 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:47.742] received message                             module=consensus ch_id=34 message="[Vote Vote{1:A3BFEF2477F9 1/00/SIGNED_MSG_TYPE_PRECOMMIT(Precommit) 000000000000 FA0DC7F2E2E2 @ 2022-01-20T15:30:47.471506759Z}]" peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:47.742] setHasVote                                   module=consensus peerH/R=1/0 H/R=1/0 type=SIGNED_MSG_TYPE_PRECOMMIT index=1
+D[2022-01-20|15:30:47.742] Received vote                                module=consensus peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c ch_id=VoteChannel type=SIGNED_MSG_TYPE_PRECOMMIT block_id=
+D[2022-01-20|15:30:47.742] adding vote                                  module=consensus vote_height=1 vote_type=SIGNED_MSG_TYPE_PRECOMMIT val_index=1 cs_height=1 block_id= vote_round=0
+I[2022-01-20|15:30:47.743] added vote to precommit                      module=consensus vote="Vote{1:A3BFEF2477F9 1/00/SIGNED_MSG_TYPE_PRECOMMIT(Precommit) 000000000000 FA0DC7F2E2E2 @ 2022-01-20T15:30:47.471506759Z}" precommits="VoteSet{H:1 R:0 T:SIGNED_MSG_TYPE_PRECOMMIT +2/3::0:000000000000(0.75) BA{4:xx_x} map[]}"
+D[2022-01-20|15:30:47.743] entering new round with invalid args         module=consensus height=1 round=0 current=1/0/RoundStepPrecommit
+D[2022-01-20|15:30:47.743] entering precommit step with invalid args    module=consensus height=1 round=0 current=1/0/RoundStepPrecommit
+D[2022-01-20|15:30:47.743] entering precommit wait step                 module=consensus height=1 round=0 current=1/0/RoundStepPrecommit
+D[2022-01-20|15:30:47.748] Broadcast                                    module=p2p channel=32 msgBytes=3A06080118022001
+D[2022-01-20|15:30:47.749] Sending to peer                              module=p2p peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c msgBytes=3A06080118022001
+D[2022-01-20|15:30:47.749] Sending to peer                              module=p2p peer=789ce20800fcb3f23a5f1412496bc881b6418bcc msgBytes=3A06080118022001
+D[2022-01-20|15:30:47.749] Sending to peer                              module=p2p peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 msgBytes=3A06080118022001
+D[2022-01-20|15:30:47.754] Broadcast                                    module=p2p channel=32 msgBytes=0A1108011806200828FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:47.754] Sending to peer                              module=p2p peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c msgBytes=0A1108011806200828FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:47.754] Sending to peer                              module=p2p peer=789ce20800fcb3f23a5f1412496bc881b6418bcc msgBytes=0A1108011806200828FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:47.754] Sending to peer                              module=p2p peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 msgBytes=0A1108011806200828FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:47.750] Received tick                                module=consensus old_ti="{TimeDuration:3s Height:1 Round:0 Step:RoundStepPrevoteWait}" new_ti="{TimeDuration:3s Height:1 Round:0 Step:RoundStepPrecommitWait}"
+D[2022-01-20|15:30:47.783] Timer already stopped                        module=consensus 
+D[2022-01-20|15:30:47.783] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:47.783] Scheduled timeout                            module=consensus dur=3s height=1 round=0 step=RoundStepPrecommitWait
+D[2022-01-20|15:30:47.783] received message                             module=consensus ch_id=32 message="[HasVote VI:1 V:{1/00/SIGNED_MSG_TYPE_PRECOMMIT}]" peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:47.783] setHasVote                                   module=consensus peerH/R=1/0 H/R=1/0 type=SIGNED_MSG_TYPE_PRECOMMIT index=1
+D[2022-01-20|15:30:47.830] sending vote message                         module=consensus ps="PeerState{\n  Key        5255c86ba259d3c93cc93f4ce130f117be0bdc18\n  RoundState PeerRoundState{\n    1/0/RoundStepPrecommit @2022-01-20 15:30:40.286930718 +0000 UTC\n    Proposal 1:D6EFEAB94421 -> BA{1:x}\n    POL      BA{4:____} (round -1)\n    Prevotes   BA{4:xx_x}\n    Precommits BA{4:x__x}\n    LastCommit nil-BitArray (round -1)\n    Catchup    BA{4:x__x} (round 0)\n  }\n  Stats      peerStateStats{votes: 2, blockParts: 0}\n}" vote="Vote{1:A3BFEF2477F9 1/00/SIGNED_MSG_TYPE_PRECOMMIT(Precommit) 000000000000 FA0DC7F2E2E2 @ 2022-01-20T15:30:47.471506759Z}"
+D[2022-01-20|15:30:47.830] setHasVote                                   module=consensus peerH/R=1/0 H/R=1/0 type=SIGNED_MSG_TYPE_PRECOMMIT index=1
+D[2022-01-20|15:30:47.831] picked rs.Precommits(prs.Round) to send      module=consensus height=1 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 round=0
+D[2022-01-20|15:30:47.831] no votes to send; sleeping                   module=consensus peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 rs.Height=1 prs.Height=1 localPV=BA{4:xx_x} peerPV=BA{4:xx_x} localPC=BA{4:xx_x} peerPC=BA{4:xx_x}
+D[2022-01-20|15:30:47.831] sending vote message                         module=consensus ps="PeerState{\n  Key        789ce20800fcb3f23a5f1412496bc881b6418bcc\n  RoundState PeerRoundState{\n    1/0/RoundStepPrecommit @2022-01-20 15:30:39.635329383 +0000 UTC\n    Proposal 1:D6EFEAB94421 -> BA{1:x}\n    POL      BA{4:____} (round -1)\n    Prevotes   BA{4:xxxx}\n    Precommits BA{4:x_xx}\n    LastCommit nil-BitArray (round -1)\n    Catchup    BA{4:x_xx} (round 0)\n  }\n  Stats      peerStateStats{votes: 0, blockParts: 0}\n}" vote="Vote{1:A3BFEF2477F9 1/00/SIGNED_MSG_TYPE_PRECOMMIT(Precommit) 000000000000 FA0DC7F2E2E2 @ 2022-01-20T15:30:47.471506759Z}"
+D[2022-01-20|15:30:47.833] setHasVote                                   module=consensus peerH/R=1/0 H/R=1/0 type=SIGNED_MSG_TYPE_PRECOMMIT index=1
+D[2022-01-20|15:30:47.833] picked rs.Precommits(prs.Round) to send      module=consensus height=1 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc round=0
+D[2022-01-20|15:30:47.833] no votes to send; sleeping                   module=consensus peer=789ce20800fcb3f23a5f1412496bc881b6418bcc rs.Height=1 prs.Height=1 localPV=BA{4:xx_x} peerPV=BA{4:xxxx} localPC=BA{4:xx_x} peerPC=BA{4:xxxx}
+D[2022-01-20|15:30:47.895] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:47.895] received message                             module=consensus ch_id=32 message="[NewRoundStep H:1 R:0 S:RoundStepPrecommit LCR:-1]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:47.959] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:47.959] received message                             module=consensus ch_id=32 message="[HasVote VI:0 V:{1/00/SIGNED_MSG_TYPE_PRECOMMIT}]" peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:47.959] setHasVote                                   module=consensus peerH/R=1/0 H/R=1/0 type=SIGNED_MSG_TYPE_PRECOMMIT index=0
+D[2022-01-20|15:30:48.003] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:48.004] received message                             module=consensus ch_id=32 message="[NewRoundStep H:1 R:0 S:RoundStepPrecommit LCR:-1]" peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:48.042] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:48.044] received message                             module=consensus ch_id=32 message="[HasVote VI:1 V:{1/00/SIGNED_MSG_TYPE_PRECOMMIT}]" peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:48.048] setHasVote                                   module=consensus peerH/R=1/0 H/R=1/0 type=SIGNED_MSG_TYPE_PRECOMMIT index=1
+D[2022-01-20|15:30:48.086] received message                             module=consensus ch_id=32 message="[NewRoundStep H:1 R:0 S:RoundStepPrecommit LCR:-1]" peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:48.086] received message                             module=consensus ch_id=32 message="[HasVote VI:1 V:{1/00/SIGNED_MSG_TYPE_PRECOMMIT}]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:48.090] setHasVote                                   module=consensus peerH/R=1/0 H/R=1/0 type=SIGNED_MSG_TYPE_PRECOMMIT index=1
+D[2022-01-20|15:30:48.090] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:48.084] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:48.148] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:48.148] received message                             module=consensus ch_id=32 message="[VSM23 1/00/SIGNED_MSG_TYPE_PRECOMMIT :0:000000000000]" peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:48.152] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:48.152] received message                             module=consensus ch_id=32 message="[VSM23 1/00/SIGNED_MSG_TYPE_PRECOMMIT :0:000000000000]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:48.169] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=35 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:48.169] received message                             module=consensus ch_id=35 message="[VSB 1/00/SIGNED_MSG_TYPE_PRECOMMIT :0:000000000000 BA{4:xx_x}]" peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:48.234] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=35 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:48.234] received message                             module=consensus ch_id=35 message="[VSB 1/00/SIGNED_MSG_TYPE_PRECOMMIT :0:000000000000 BA{4:xxxx}]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:48.708] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=35 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:48.715] received message                             module=consensus ch_id=35 message="[VSB 1/00/SIGNED_MSG_TYPE_PRECOMMIT :0:000000000000 BA{4:xx_x}]" peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:48.728] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:48.728] received message                             module=consensus ch_id=32 message="[VSM23 1/00/SIGNED_MSG_TYPE_PRECOMMIT :0:000000000000]" peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:50.658] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:50.658] received message                             module=consensus ch_id=32 message="[NewRoundStep H:1 R:1 S:RoundStepPropose LCR:-1]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+I[2022-01-20|15:30:50.787] Timed out                                    module=consensus dur=3s height=1 round=0 step=RoundStepPrecommitWait
+D[2022-01-20|15:30:50.788] received tock                                module=consensus timeout=3s height=1 round=0 step=RoundStepPrecommitWait
+D[2022-01-20|15:30:50.788] entering precommit step with invalid args    module=consensus height=1 round=0 current=1/0/RoundStepPrecommit
+D[2022-01-20|15:30:50.788] entering new round                           module=consensus height=1 round=1 current=1/0/RoundStepPrecommit
+D[2022-01-20|15:30:50.824] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:50.826] received message                             module=consensus ch_id=32 message="[NewRoundStep H:1 R:1 S:RoundStepPropose LCR:-1]" peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:50.886] resetting proposal info                      module=consensus height=1 round=1
+D[2022-01-20|15:30:50.886] entering propose step                        module=consensus height=1 round=1 current=1/1/RoundStepNewRound
+D[2022-01-20|15:30:50.886] node is a validator                          module=consensus height=1 round=1
+D[2022-01-20|15:30:50.887] propose step; not our turn to propose        module=consensus height=1 round=1 proposer=A3BFEF2477F90160862C9483844CC964D7D33328
+D[2022-01-20|15:30:50.887] Received tick                                module=consensus old_ti="{TimeDuration:3s Height:1 Round:0 Step:RoundStepPrecommitWait}" new_ti="{TimeDuration:3.5s Height:1 Round:1 Step:RoundStepPropose}"
+D[2022-01-20|15:30:50.887] Timer already stopped                        module=consensus 
+D[2022-01-20|15:30:50.887] Scheduled timeout                            module=consensus dur=3.5s height=1 round=1 step=RoundStepPropose
+D[2022-01-20|15:30:50.890] Broadcast                                    module=p2p channel=32 msgBytes=0A13080110011803200B28FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:50.890] Sending to peer                              module=p2p peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c msgBytes=0A13080110011803200B28FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:50.891] Sending to peer                              module=p2p peer=789ce20800fcb3f23a5f1412496bc881b6418bcc msgBytes=0A13080110011803200B28FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:50.891] Sending to peer                              module=p2p peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 msgBytes=0A13080110011803200B28FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:50.921] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:50.921] received message                             module=consensus ch_id=32 message="[HasVote VI:1 V:{1/01/SIGNED_MSG_TYPE_PREVOTE}]" peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:50.921] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PREVOTE index=1
+D[2022-01-20|15:30:50.927] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:50.927] received message                             module=consensus ch_id=32 message="[NewRoundStep H:1 R:1 S:RoundStepPrevote LCR:-1]" peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:51.020] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:51.021] received message                             module=consensus ch_id=32 message="[HasVote VI:1 V:{1/01/SIGNED_MSG_TYPE_PREVOTE}]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:51.021] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PREVOTE index=1
+D[2022-01-20|15:30:51.055] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:51.056] received message                             module=consensus ch_id=32 message="[NewRoundStep H:1 R:1 S:RoundStepPropose LCR:-1]" peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:51.088] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:51.089] received message                             module=consensus ch_id=32 message="[NewRoundStep H:1 R:1 S:RoundStepPrevote LCR:-1]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:51.104] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:51.104] received message                             module=consensus ch_id=32 message="[HasVote VI:2 V:{1/01/SIGNED_MSG_TYPE_PREVOTE}]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:51.104] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PREVOTE index=2
+D[2022-01-20|15:30:51.127] received message                             module=consensus ch_id=33 message="[BlockPart H:1 R:1 P:Part{#0\n  Bytes: 0AAB020A0408...\n  Proof: Proof{\n    Aunts: []\n  }\n}]" peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:51.128] received a block part when we are not expecting any module=consensus height=1 round=1 index=0 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:51.127] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=33 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:51.183] received message                             module=consensus ch_id=33 message="[Proposal Proposal{1/1 (7D5DC55F58C47E0EF51D884C27B2FB549F4CAFB67DFA42E9F1DA87CE8BC28724:1:C3AEFBE0B8CE, -1) CBFB976DADF2 @ 2022-01-20T15:30:50.705544428Z}]" peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:51.182] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=33 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+I[2022-01-20|15:30:51.185] received proposal and yet to check           module=consensus proposal="Proposal{1/1 (7D5DC55F58C47E0EF51D884C27B2FB549F4CAFB67DFA42E9F1DA87CE8BC28724:1:C3AEFBE0B8CE, -1) CBFB976DADF2 @ 2022-01-20T15:30:50.705544428Z}"
+I[2022-01-20|15:30:51.188] received proposal                            module=consensus proposal="Proposal{1/1 (7D5DC55F58C47E0EF51D884C27B2FB549F4CAFB67DFA42E9F1DA87CE8BC28724:1:C3AEFBE0B8CE, -1) CBFB976DADF2 @ 2022-01-20T15:30:50.705544428Z}"
+D[2022-01-20|15:30:51.196] sending proposal                             module=consensus peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 height=1 round=1
+D[2022-01-20|15:30:51.197] sending proposal                             module=consensus peer=789ce20800fcb3f23a5f1412496bc881b6418bcc height=1 round=1
+D[2022-01-20|15:30:51.204] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=34 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:51.205] received message                             module=consensus ch_id=34 message="[Vote Vote{1:A3BFEF2477F9 1/01/SIGNED_MSG_TYPE_PREVOTE(Prevote) 7D5DC55F58C4 72B793A2A015 @ 2022-01-20T15:30:50.770307969Z}]" peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:51.205] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PREVOTE index=1
+D[2022-01-20|15:30:51.205] Received vote                                module=consensus peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c ch_id=VoteChannel type=SIGNED_MSG_TYPE_PREVOTE block_id="}]\ufffd_X\ufffd~\u000e\ufffd\u001d\ufffdL'\ufffd\ufffdT\ufffdL\ufffd\ufffd}\ufffdB\ufffd\ufffdڇ΋$"
+D[2022-01-20|15:30:51.205] adding vote                                  module=consensus vote_height=1 vote_type=SIGNED_MSG_TYPE_PREVOTE val_index=1 cs_height=1 block_id="}]\ufffd_X\ufffd~\u000e\ufffd\u001d\ufffdL'\ufffd\ufffdT\ufffdL\ufffd\ufffd}\ufffdB\ufffd\ufffdڇ΋$" vote_round=1
+D[2022-01-20|15:30:51.206] added vote to prevote                        module=consensus vote="Vote{1:A3BFEF2477F9 1/01/SIGNED_MSG_TYPE_PREVOTE(Prevote) 7D5DC55F58C4 72B793A2A015 @ 2022-01-20T15:30:50.770307969Z}" prevotes="VoteSet{H:1 R:1 T:SIGNED_MSG_TYPE_PREVOTE +2/3:<nil>(0.25) BA{4:_x__} map[]}"
+D[2022-01-20|15:30:51.207] Broadcast                                    module=p2p channel=32 msgBytes=3A080801100118012001
+D[2022-01-20|15:30:51.207] Sending to peer                              module=p2p peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c msgBytes=3A080801100118012001
+D[2022-01-20|15:30:51.207] Sending to peer                              module=p2p peer=789ce20800fcb3f23a5f1412496bc881b6418bcc msgBytes=3A080801100118012001
+D[2022-01-20|15:30:51.207] Sending to peer                              module=p2p peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 msgBytes=3A080801100118012001
+D[2022-01-20|15:30:51.226] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=34 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:51.227] received message                             module=consensus ch_id=34 message="[Vote Vote{1:A3BFEF2477F9 1/01/SIGNED_MSG_TYPE_PREVOTE(Prevote) 7D5DC55F58C4 72B793A2A015 @ 2022-01-20T15:30:50.770307969Z}]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:51.227] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PREVOTE index=1
+D[2022-01-20|15:30:51.227] Received vote                                module=consensus peer=789ce20800fcb3f23a5f1412496bc881b6418bcc ch_id=VoteChannel type=SIGNED_MSG_TYPE_PREVOTE block_id="}]\ufffd_X\ufffd~\u000e\ufffd\u001d\ufffdL'\ufffd\ufffdT\ufffdL\ufffd\ufffd}\ufffdB\ufffd\ufffdڇ΋$"
+D[2022-01-20|15:30:51.228] adding vote                                  module=consensus vote_height=1 vote_type=SIGNED_MSG_TYPE_PREVOTE val_index=1 cs_height=1 block_id="}]\ufffd_X\ufffd~\u000e\ufffd\u001d\ufffdL'\ufffd\ufffdT\ufffdL\ufffd\ufffd}\ufffdB\ufffd\ufffdڇ΋$" vote_round=1
+D[2022-01-20|15:30:51.237] received message                             module=consensus ch_id=33 message="[BlockPart H:1 R:1 P:Part{#0\n  Bytes: 0AAB020A0408...\n  Proof: Proof{\n    Aunts: []\n  }\n}]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+I[2022-01-20|15:30:51.239] received complete proposal block             module=consensus height=1 hash=7D5DC55F58C47E0EF51D884C27B2FB549F4CAFB67DFA42E9F1DA87CE8BC28724
+D[2022-01-20|15:30:51.240] entering prevote step                        module=consensus height=1 round=1 current=1/1/RoundStepPropose
+D[2022-01-20|15:30:51.240] prevote step: ProposalBlock is valid         module=consensus height=1 round=1
+D[2022-01-20|15:30:51.244] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=33 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+I[2022-01-20|15:30:51.250] Signing vote                                 module=consensus pubkey-addr=63145AEFE40D5D88B3A7449A294A245CF91862FB
+D[2022-01-20|15:30:51.260] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=33 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:51.261] received message                             module=consensus ch_id=33 message="[Proposal Proposal{1/1 (7D5DC55F58C47E0EF51D884C27B2FB549F4CAFB67DFA42E9F1DA87CE8BC28724:1:C3AEFBE0B8CE, -1) CBFB976DADF2 @ 2022-01-20T15:30:50.705544428Z}]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+I[2022-01-20|15:30:51.287] signed and pushed vote                       module=consensus height=1 round=1 vote="Vote{0:63145AEFE40D 1/01/SIGNED_MSG_TYPE_PREVOTE(Prevote) 7D5DC55F58C4 60DA5F7B4324 @ 2022-01-20T15:30:51.247506386Z}"
+D[2022-01-20|15:30:51.344] Broadcast                                    module=p2p channel=32 msgBytes=0A13080110011804200B28FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:51.346] Sending to peer                              module=p2p peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c msgBytes=0A13080110011804200B28FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:51.347] Sending to peer                              module=p2p peer=789ce20800fcb3f23a5f1412496bc881b6418bcc msgBytes=0A13080110011804200B28FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:51.348] Sending to peer                              module=p2p peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 msgBytes=0A13080110011804200B28FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:51.348] sending block part                           module=consensus peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c height=1 round=1
+I[2022-01-20|15:30:51.366] received proposal and yet to check           module=consensus proposal="Proposal{1/1 (7D5DC55F58C47E0EF51D884C27B2FB549F4CAFB67DFA42E9F1DA87CE8BC28724:1:C3AEFBE0B8CE, -1) CBFB976DADF2 @ 2022-01-20T15:30:50.705544428Z}"
+D[2022-01-20|15:30:51.374] sending block part                           module=consensus peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 height=1 round=1
+D[2022-01-20|15:30:51.377] sending vote message                         module=consensus ps="PeerState{\n  Key        5255c86ba259d3c93cc93f4ce130f117be0bdc18\n  RoundState PeerRoundState{\n    1/1/RoundStepPropose @2022-01-20 15:30:40.056340303 +0000 UTC\n    Proposal 1:C3AEFBE0B8CE -> BA{1:x}\n    POL      BA{4:____} (round -1)\n    Prevotes   BA{4:____}\n    Precommits BA{4:____}\n    LastCommit nil-BitArray (round -1)\n    Catchup    BA{4:xx_x} (round 0)\n  }\n  Stats      peerStateStats{votes: 2, blockParts: 0}\n}" vote="Vote{1:A3BFEF2477F9 1/01/SIGNED_MSG_TYPE_PREVOTE(Prevote) 7D5DC55F58C4 72B793A2A015 @ 2022-01-20T15:30:50.770307969Z}"
+D[2022-01-20|15:30:51.378] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PREVOTE index=1
+D[2022-01-20|15:30:51.378] picked rs.Prevotes(prs.Round) to send        module=consensus height=1 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 round=1
+D[2022-01-20|15:30:51.378] adding vote                                  module=consensus vote_height=1 vote_type=SIGNED_MSG_TYPE_PREVOTE val_index=0 cs_height=1 block_id="}]\ufffd_X\ufffd~\u000e\ufffd\u001d\ufffdL'\ufffd\ufffdT\ufffdL\ufffd\ufffd}\ufffdB\ufffd\ufffdڇ΋$" vote_round=1
+D[2022-01-20|15:30:51.383] added vote to prevote                        module=consensus vote="Vote{0:63145AEFE40D 1/01/SIGNED_MSG_TYPE_PREVOTE(Prevote) 7D5DC55F58C4 60DA5F7B4324 @ 2022-01-20T15:30:51.247506386Z}" prevotes="VoteSet{H:1 R:1 T:SIGNED_MSG_TYPE_PREVOTE +2/3:<nil>(0.5) BA{4:xx__} map[]}"
+D[2022-01-20|15:30:51.386] Broadcast                                    module=p2p channel=32 msgBytes=3A06080110011801
+D[2022-01-20|15:30:51.388] Sending to peer                              module=p2p peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c msgBytes=3A06080110011801
+D[2022-01-20|15:30:51.388] Sending to peer                              module=p2p peer=789ce20800fcb3f23a5f1412496bc881b6418bcc msgBytes=3A06080110011801
+D[2022-01-20|15:30:51.388] Sending to peer                              module=p2p peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 msgBytes=3A06080110011801
+D[2022-01-20|15:30:51.388] sending vote message                         module=consensus ps="PeerState{\n  Key        5255c86ba259d3c93cc93f4ce130f117be0bdc18\n  RoundState PeerRoundState{\n    1/1/RoundStepPropose @2022-01-20 15:30:40.056340303 +0000 UTC\n    Proposal 1:C3AEFBE0B8CE -> BA{1:x}\n    POL      BA{4:____} (round -1)\n    Prevotes   BA{4:_x__}\n    Precommits BA{4:____}\n    LastCommit nil-BitArray (round -1)\n    Catchup    BA{4:xx_x} (round 0)\n  }\n  Stats      peerStateStats{votes: 2, blockParts: 0}\n}" vote="Vote{0:63145AEFE40D 1/01/SIGNED_MSG_TYPE_PREVOTE(Prevote) 7D5DC55F58C4 60DA5F7B4324 @ 2022-01-20T15:30:51.247506386Z}"
+D[2022-01-20|15:30:51.389] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PREVOTE index=0
+D[2022-01-20|15:30:51.389] picked rs.Prevotes(prs.Round) to send        module=consensus height=1 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 round=1
+D[2022-01-20|15:30:51.390] attempt to update stats for non-existent peer module=consensus peer=
+D[2022-01-20|15:30:51.394] no votes to send; sleeping                   module=consensus peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 rs.Height=1 prs.Height=1 localPV=BA{4:xx__} peerPV=BA{4:xx__} localPC=BA{4:____} peerPC=BA{4:____}
+D[2022-01-20|15:30:51.411] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:51.412] received message                             module=consensus ch_id=32 message="[HasVote VI:1 V:{1/01/SIGNED_MSG_TYPE_PREVOTE}]" peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:51.417] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PREVOTE index=1
+D[2022-01-20|15:30:51.452] sending vote message                         module=consensus ps="PeerState{\n  Key        789ce20800fcb3f23a5f1412496bc881b6418bcc\n  RoundState PeerRoundState{\n    1/1/RoundStepPrevote @2022-01-20 15:30:40.090029011 +0000 UTC\n    Proposal 1:C3AEFBE0B8CE -> BA{1:x}\n    POL      BA{4:____} (round -1)\n    Prevotes   BA{4:_xx_}\n    Precommits BA{4:____}\n    LastCommit nil-BitArray (round -1)\n    Catchup    BA{4:xxxx} (round 0)\n  }\n  Stats      peerStateStats{votes: 0, blockParts: 1}\n}" vote="Vote{0:63145AEFE40D 1/01/SIGNED_MSG_TYPE_PREVOTE(Prevote) 7D5DC55F58C4 60DA5F7B4324 @ 2022-01-20T15:30:51.247506386Z}"
+D[2022-01-20|15:30:51.455] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PREVOTE index=0
+D[2022-01-20|15:30:51.455] picked rs.Prevotes(prs.Round) to send        module=consensus height=1 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc round=1
+D[2022-01-20|15:30:51.456] no votes to send; sleeping                   module=consensus peer=789ce20800fcb3f23a5f1412496bc881b6418bcc rs.Height=1 prs.Height=1 localPV=BA{4:xx__} peerPV=BA{4:xxx_} localPC=BA{4:____} peerPC=BA{4:____}
+D[2022-01-20|15:30:51.454] sending vote message                         module=consensus ps="PeerState{\n  Key        53aac1a7619a471bf1ce3ad367ce7b06ae84865c\n  RoundState PeerRoundState{\n    1/1/RoundStepPrevote @2022-01-20 15:30:39.927993636 +0000 UTC\n    Proposal 1:C3AEFBE0B8CE -> BA{1:x}\n    POL      BA{4:____} (round -1)\n    Prevotes   BA{4:_x__}\n    Precommits BA{4:____}\n    LastCommit nil-BitArray (round -1)\n    Catchup    BA{4:xx_x} (round 0)\n  }\n  Stats      peerStateStats{votes: 3, blockParts: 0}\n}" vote="Vote{0:63145AEFE40D 1/01/SIGNED_MSG_TYPE_PREVOTE(Prevote) 7D5DC55F58C4 60DA5F7B4324 @ 2022-01-20T15:30:51.247506386Z}"
+D[2022-01-20|15:30:51.458] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PREVOTE index=0
+D[2022-01-20|15:30:51.458] picked rs.Prevotes(prs.Round) to send        module=consensus height=1 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c round=1
+D[2022-01-20|15:30:51.458] no votes to send; sleeping                   module=consensus peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c rs.Height=1 prs.Height=1 localPV=BA{4:xx__} peerPV=BA{4:xx__} localPC=BA{4:____} peerPC=BA{4:____}
+D[2022-01-20|15:30:51.467] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=34 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:51.467] received message                             module=consensus ch_id=34 message="[Vote Vote{1:A3BFEF2477F9 1/01/SIGNED_MSG_TYPE_PREVOTE(Prevote) 7D5DC55F58C4 72B793A2A015 @ 2022-01-20T15:30:50.770307969Z}]" peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:51.467] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PREVOTE index=1
+D[2022-01-20|15:30:51.468] Received vote                                module=consensus peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 ch_id=VoteChannel type=SIGNED_MSG_TYPE_PREVOTE block_id="}]\ufffd_X\ufffd~\u000e\ufffd\u001d\ufffdL'\ufffd\ufffdT\ufffdL\ufffd\ufffd}\ufffdB\ufffd\ufffdڇ΋$"
+D[2022-01-20|15:30:51.468] adding vote                                  module=consensus vote_height=1 vote_type=SIGNED_MSG_TYPE_PREVOTE val_index=1 cs_height=1 block_id="}]\ufffd_X\ufffd~\u000e\ufffd\u001d\ufffdL'\ufffd\ufffdT\ufffdL\ufffd\ufffd}\ufffdB\ufffd\ufffdڇ΋$" vote_round=1
+D[2022-01-20|15:30:51.510] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=33 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:51.510] received message                             module=consensus ch_id=33 message="[BlockPart H:1 R:1 P:Part{#0\n  Bytes: 0AAB020A0408...\n  Proof: Proof{\n    Aunts: []\n  }\n}]" peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:51.516] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:51.516] received message                             module=consensus ch_id=32 message="[NewRoundStep H:1 R:1 S:RoundStepPrevote LCR:-1]" peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:51.572] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:51.573] received message                             module=consensus ch_id=32 message="[HasVote VI:3 V:{1/01/SIGNED_MSG_TYPE_PREVOTE}]" peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:51.573] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PREVOTE index=3
+D[2022-01-20|15:30:51.668] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=34 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:51.672] received message                             module=consensus ch_id=34 message="[Vote Vote{3:F61B45CED157 1/01/SIGNED_MSG_TYPE_PREVOTE(Prevote) 000000000000 E1062B4367D4 @ 2022-01-20T15:30:51.321933594Z}]" peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:51.686] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PREVOTE index=3
+D[2022-01-20|15:30:51.688] Received vote                                module=consensus peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 ch_id=VoteChannel type=SIGNED_MSG_TYPE_PREVOTE block_id=
+D[2022-01-20|15:30:51.689] adding vote                                  module=consensus vote_height=1 vote_type=SIGNED_MSG_TYPE_PREVOTE val_index=3 cs_height=1 block_id= vote_round=1
+D[2022-01-20|15:30:51.718] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:51.725] added vote to prevote                        module=consensus vote="Vote{3:F61B45CED157 1/01/SIGNED_MSG_TYPE_PREVOTE(Prevote) 000000000000 E1062B4367D4 @ 2022-01-20T15:30:51.321933594Z}" prevotes="VoteSet{H:1 R:1 T:SIGNED_MSG_TYPE_PREVOTE +2/3:<nil>(0.75) BA{4:xx_x} map[]}"
+D[2022-01-20|15:30:51.725] entering prevote wait step                   module=consensus height=1 round=1 current=1/1/RoundStepPrevote
+D[2022-01-20|15:30:51.725] Received tick                                module=consensus old_ti="{TimeDuration:3.5s Height:1 Round:1 Step:RoundStepPropose}" new_ti="{TimeDuration:3.5s Height:1 Round:1 Step:RoundStepPrevoteWait}"
+D[2022-01-20|15:30:51.725] Scheduled timeout                            module=consensus dur=3.5s height=1 round=1 step=RoundStepPrevoteWait
+D[2022-01-20|15:30:51.726] Broadcast                                    module=p2p channel=32 msgBytes=3A080801100118012003
+D[2022-01-20|15:30:51.726] Sending to peer                              module=p2p peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c msgBytes=3A080801100118012003
+D[2022-01-20|15:30:51.726] Sending to peer                              module=p2p peer=789ce20800fcb3f23a5f1412496bc881b6418bcc msgBytes=3A080801100118012003
+D[2022-01-20|15:30:51.726] Sending to peer                              module=p2p peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 msgBytes=3A080801100118012003
+D[2022-01-20|15:30:51.721] received message                             module=consensus ch_id=32 message="[HasVote VI:3 V:{1/01/SIGNED_MSG_TYPE_PREVOTE}]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:51.741] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PREVOTE index=3
+D[2022-01-20|15:30:51.748] received message                             module=consensus ch_id=32 message="[NewRoundStep H:1 R:1 S:RoundStepPrevoteWait LCR:-1]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:51.749] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:51.773] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=34 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:51.774] received message                             module=consensus ch_id=34 message="[Vote Vote{3:F61B45CED157 1/01/SIGNED_MSG_TYPE_PREVOTE(Prevote) 000000000000 E1062B4367D4 @ 2022-01-20T15:30:51.321933594Z}]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:51.801] Broadcast                                    module=p2p channel=32 msgBytes=0A13080110011805200C28FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:51.802] Sending to peer                              module=p2p peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c msgBytes=0A13080110011805200C28FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:51.806] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PREVOTE index=3
+D[2022-01-20|15:30:51.806] Received vote                                module=consensus peer=789ce20800fcb3f23a5f1412496bc881b6418bcc ch_id=VoteChannel type=SIGNED_MSG_TYPE_PREVOTE block_id=
+D[2022-01-20|15:30:51.806] adding vote                                  module=consensus vote_height=1 vote_type=SIGNED_MSG_TYPE_PREVOTE val_index=3 cs_height=1 block_id= vote_round=1
+D[2022-01-20|15:30:51.815] sending vote message                         module=consensus ps="PeerState{\n  Key        53aac1a7619a471bf1ce3ad367ce7b06ae84865c\n  RoundState PeerRoundState{\n    1/1/RoundStepPrevote @2022-01-20 15:30:39.927993636 +0000 UTC\n    Proposal 1:C3AEFBE0B8CE -> BA{1:x}\n    POL      BA{4:____} (round -1)\n    Prevotes   BA{4:xx__}\n    Precommits BA{4:____}\n    LastCommit nil-BitArray (round -1)\n    Catchup    BA{4:xx_x} (round 0)\n  }\n  Stats      peerStateStats{votes: 3, blockParts: 0}\n}" vote="Vote{3:F61B45CED157 1/01/SIGNED_MSG_TYPE_PREVOTE(Prevote) 000000000000 E1062B4367D4 @ 2022-01-20T15:30:51.321933594Z}"
+D[2022-01-20|15:30:51.816] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PREVOTE index=3
+D[2022-01-20|15:30:51.816] picked rs.Prevotes(prs.Round) to send        module=consensus height=1 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c round=1
+D[2022-01-20|15:30:51.817] no votes to send; sleeping                   module=consensus peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c rs.Height=1 prs.Height=1 localPV=BA{4:xx_x} peerPV=BA{4:xx_x} localPC=BA{4:____} peerPC=BA{4:____}
+D[2022-01-20|15:30:51.834] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:51.835] received message                             module=consensus ch_id=32 message="[ValidBlockMessage H:1 R:1 BP:1:C3AEFBE0B8CE BA:BA{1:x} IsCommit:false]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:51.802] Sending to peer                              module=p2p peer=789ce20800fcb3f23a5f1412496bc881b6418bcc msgBytes=0A13080110011805200C28FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:51.836] Sending to peer                              module=p2p peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 msgBytes=0A13080110011805200C28FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:51.838] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:51.838] received message                             module=consensus ch_id=32 message="[HasVote VI:0 V:{1/01/SIGNED_MSG_TYPE_PREVOTE}]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:51.838] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PREVOTE index=0
+D[2022-01-20|15:30:51.914] received message                             module=consensus ch_id=32 message="[HasVote VI:0 V:{1/01/SIGNED_MSG_TYPE_PREVOTE}]" peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:51.915] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PREVOTE index=0
+D[2022-01-20|15:30:51.921] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:51.939] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:51.947] received message                             module=consensus ch_id=32 message="[HasVote VI:3 V:{1/01/SIGNED_MSG_TYPE_PREVOTE}]" peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:51.957] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PREVOTE index=3
+D[2022-01-20|15:30:51.992] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:51.992] received message                             module=consensus ch_id=32 message="[ValidBlockMessage H:1 R:1 BP:1:C3AEFBE0B8CE BA:BA{1:x} IsCommit:false]" peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:52.003] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:52.004] received message                             module=consensus ch_id=32 message="[NewRoundStep H:1 R:1 S:RoundStepPrecommit LCR:-1]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:52.008] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:52.010] received message                             module=consensus ch_id=32 message="[HasVote VI:2 V:{1/01/SIGNED_MSG_TYPE_PRECOMMIT}]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:52.011] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PRECOMMIT index=2
+D[2022-01-20|15:30:52.063] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=34 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:52.064] received message                             module=consensus ch_id=34 message="[Vote Vote{3:F61B45CED157 1/01/SIGNED_MSG_TYPE_PREVOTE(Prevote) 000000000000 E1062B4367D4 @ 2022-01-20T15:30:51.321933594Z}]" peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:52.066] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PREVOTE index=3
+D[2022-01-20|15:30:52.066] Received vote                                module=consensus peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c ch_id=VoteChannel type=SIGNED_MSG_TYPE_PREVOTE block_id=
+D[2022-01-20|15:30:52.068] adding vote                                  module=consensus vote_height=1 vote_type=SIGNED_MSG_TYPE_PREVOTE val_index=3 cs_height=1 block_id= vote_round=1
+D[2022-01-20|15:30:52.093] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:52.094] received message                             module=consensus ch_id=32 message="[NewRoundStep H:1 R:1 S:RoundStepPrecommit LCR:-1]" peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:52.112] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:52.112] received message                             module=consensus ch_id=32 message="[HasVote VI:3 V:{1/01/SIGNED_MSG_TYPE_PRECOMMIT}]" peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:52.113] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PRECOMMIT index=3
+D[2022-01-20|15:30:52.152] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:52.152] received message                             module=consensus ch_id=32 message="[HasVote VI:0 V:{1/01/SIGNED_MSG_TYPE_PREVOTE}]" peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:52.152] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PREVOTE index=0
+D[2022-01-20|15:30:52.206] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:52.207] received message                             module=consensus ch_id=32 message="[VSM23 1/01/SIGNED_MSG_TYPE_PREVOTE 7D5DC55F58C47E0EF51D884C27B2FB549F4CAFB67DFA42E9F1DA87CE8BC28724:1:C3AEFBE0B8CE]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:52.207] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=34 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:52.208] received message                             module=consensus ch_id=34 message="[Vote Vote{3:F61B45CED157 1/01/SIGNED_MSG_TYPE_PRECOMMIT(Precommit) 000000000000 1BF1A99F9A61 @ 2022-01-20T15:30:51.715101511Z}]" peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:52.209] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PRECOMMIT index=3
+D[2022-01-20|15:30:52.209] Received vote                                module=consensus peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 ch_id=VoteChannel type=SIGNED_MSG_TYPE_PRECOMMIT block_id=
+D[2022-01-20|15:30:52.209] adding vote                                  module=consensus vote_height=1 vote_type=SIGNED_MSG_TYPE_PRECOMMIT val_index=3 cs_height=1 block_id= vote_round=1
+D[2022-01-20|15:30:52.217] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:52.210] received message                             module=consensus ch_id=32 message="[NewRoundStep H:1 R:1 S:RoundStepPrevoteWait LCR:-1]" peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+I[2022-01-20|15:30:52.219] added vote to precommit                      module=consensus vote="Vote{3:F61B45CED157 1/01/SIGNED_MSG_TYPE_PRECOMMIT(Precommit) 000000000000 1BF1A99F9A61 @ 2022-01-20T15:30:51.715101511Z}" precommits="VoteSet{H:1 R:1 T:SIGNED_MSG_TYPE_PRECOMMIT +2/3:<nil>(0.25) BA{4:___x} map[]}"
+D[2022-01-20|15:30:52.221] Broadcast                                    module=p2p channel=32 msgBytes=3A080801100118022003
+D[2022-01-20|15:30:52.221] Sending to peer                              module=p2p peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c msgBytes=3A080801100118022003
+D[2022-01-20|15:30:52.221] Sending to peer                              module=p2p peer=789ce20800fcb3f23a5f1412496bc881b6418bcc msgBytes=3A080801100118022003
+D[2022-01-20|15:30:52.221] Sending to peer                              module=p2p peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 msgBytes=3A080801100118022003
+D[2022-01-20|15:30:52.221] sending vote message                         module=consensus ps="PeerState{\n  Key        53aac1a7619a471bf1ce3ad367ce7b06ae84865c\n  RoundState PeerRoundState{\n    1/1/RoundStepPrevoteWait @2022-01-20 15:30:40.220046928 +0000 UTC\n    Proposal 1:C3AEFBE0B8CE -> BA{1:x}\n    POL      BA{4:____} (round -1)\n    Prevotes   BA{4:xx_x}\n    Precommits BA{4:____}\n    LastCommit nil-BitArray (round -1)\n    Catchup    BA{4:xx_x} (round 0)\n  }\n  Stats      peerStateStats{votes: 3, blockParts: 0}\n}" vote="Vote{3:F61B45CED157 1/01/SIGNED_MSG_TYPE_PRECOMMIT(Precommit) 000000000000 1BF1A99F9A61 @ 2022-01-20T15:30:51.715101511Z}"
+D[2022-01-20|15:30:52.221] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PRECOMMIT index=3
+D[2022-01-20|15:30:52.221] picked rs.Precommits(prs.Round) to send      module=consensus height=1 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c round=1
+D[2022-01-20|15:30:52.221] no votes to send; sleeping                   module=consensus peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c rs.Height=1 prs.Height=1 localPV=BA{4:xx_x} peerPV=BA{4:xx_x} localPC=BA{4:___x} peerPC=BA{4:___x}
+D[2022-01-20|15:30:52.222] sending vote message                         module=consensus ps="PeerState{\n  Key        789ce20800fcb3f23a5f1412496bc881b6418bcc\n  RoundState PeerRoundState{\n    1/1/RoundStepPrecommit @2022-01-20 15:30:40.00747172 +0000 UTC\n    Proposal 1:C3AEFBE0B8CE -> BA{1:x}\n    POL      BA{4:____} (round -1)\n    Prevotes   BA{4:xxxx}\n    Precommits BA{4:__x_}\n    LastCommit nil-BitArray (round -1)\n    Catchup    BA{4:xxxx} (round 0)\n  }\n  Stats      peerStateStats{votes: 0, blockParts: 1}\n}" vote="Vote{3:F61B45CED157 1/01/SIGNED_MSG_TYPE_PRECOMMIT(Precommit) 000000000000 1BF1A99F9A61 @ 2022-01-20T15:30:51.715101511Z}"
+D[2022-01-20|15:30:52.223] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PRECOMMIT index=3
+D[2022-01-20|15:30:52.223] picked rs.Precommits(prs.Round) to send      module=consensus height=1 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc round=1
+D[2022-01-20|15:30:52.224] no votes to send; sleeping                   module=consensus peer=789ce20800fcb3f23a5f1412496bc881b6418bcc rs.Height=1 prs.Height=1 localPV=BA{4:xx_x} peerPV=BA{4:xxxx} localPC=BA{4:___x} peerPC=BA{4:__xx}
+D[2022-01-20|15:30:52.309] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:52.314] received message                             module=consensus ch_id=32 message="[HasVote VI:3 V:{1/01/SIGNED_MSG_TYPE_PRECOMMIT}]" peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:52.316] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PRECOMMIT index=3
+D[2022-01-20|15:30:52.332] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=34 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:52.333] received message                             module=consensus ch_id=34 message="[Vote Vote{3:F61B45CED157 1/01/SIGNED_MSG_TYPE_PRECOMMIT(Precommit) 000000000000 1BF1A99F9A61 @ 2022-01-20T15:30:51.715101511Z}]" peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:52.333] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PRECOMMIT index=3
+D[2022-01-20|15:30:52.334] Received vote                                module=consensus peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c ch_id=VoteChannel type=SIGNED_MSG_TYPE_PRECOMMIT block_id=
+D[2022-01-20|15:30:52.334] adding vote                                  module=consensus vote_height=1 vote_type=SIGNED_MSG_TYPE_PRECOMMIT val_index=3 cs_height=1 block_id= vote_round=1
+D[2022-01-20|15:30:52.346] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:52.347] received message                             module=consensus ch_id=32 message="[HasVote VI:3 V:{1/01/SIGNED_MSG_TYPE_PRECOMMIT}]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:52.347] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PRECOMMIT index=3
+D[2022-01-20|15:30:52.418] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=34 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:52.419] received message                             module=consensus ch_id=34 message="[Vote Vote{3:F61B45CED157 1/01/SIGNED_MSG_TYPE_PRECOMMIT(Precommit) 000000000000 1BF1A99F9A61 @ 2022-01-20T15:30:51.715101511Z}]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:52.420] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PRECOMMIT index=3
+D[2022-01-20|15:30:52.420] Received vote                                module=consensus peer=789ce20800fcb3f23a5f1412496bc881b6418bcc ch_id=VoteChannel type=SIGNED_MSG_TYPE_PRECOMMIT block_id=
+D[2022-01-20|15:30:52.420] adding vote                                  module=consensus vote_height=1 vote_type=SIGNED_MSG_TYPE_PRECOMMIT val_index=3 cs_height=1 block_id= vote_round=1
+D[2022-01-20|15:30:52.730] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:52.731] received message                             module=consensus ch_id=32 message="[VSM23 1/01/SIGNED_MSG_TYPE_PREVOTE 7D5DC55F58C47E0EF51D884C27B2FB549F4CAFB67DFA42E9F1DA87CE8BC28724:1:C3AEFBE0B8CE]" peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:52.802] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=34 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:52.806] received message                             module=consensus ch_id=34 message="[Vote Vote{3:F61B45CED157 1/01/SIGNED_MSG_TYPE_PREVOTE(Prevote) 000000000000 E1062B4367D4 @ 2022-01-20T15:30:51.321933594Z}]" peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:52.806] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PREVOTE index=3
+D[2022-01-20|15:30:52.806] Received vote                                module=consensus peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 ch_id=VoteChannel type=SIGNED_MSG_TYPE_PREVOTE block_id=
+D[2022-01-20|15:30:52.806] adding vote                                  module=consensus vote_height=1 vote_type=SIGNED_MSG_TYPE_PREVOTE val_index=3 cs_height=1 block_id= vote_round=1
+I[2022-01-20|15:30:55.226] Timed out                                    module=consensus dur=3.5s height=1 round=1 step=RoundStepPrevoteWait
+D[2022-01-20|15:30:55.228] received tock                                module=consensus timeout=3.5s height=1 round=1 step=RoundStepPrevoteWait
+D[2022-01-20|15:30:55.229] entering precommit step                      module=consensus height=1 round=1 current=1/1/RoundStepPrevoteWait
+D[2022-01-20|15:30:55.229] precommit step; no +2/3 prevotes during enterPrecommit; precommitting nil module=consensus height=1 round=1
+I[2022-01-20|15:30:55.231] Signing vote                                 module=consensus pubkey-addr=63145AEFE40D5D88B3A7449A294A245CF91862FB
+I[2022-01-20|15:30:55.255] signed and pushed vote                       module=consensus height=1 round=1 vote="Vote{0:63145AEFE40D 1/01/SIGNED_MSG_TYPE_PRECOMMIT(Precommit) 000000000000 BE27AA4A6C97 @ 2022-01-20T15:30:55.231282305Z}"
+D[2022-01-20|15:30:55.265] Broadcast                                    module=p2p channel=32 msgBytes=0A13080110011806200F28FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:55.267] Sending to peer                              module=p2p peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c msgBytes=0A13080110011806200F28FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:55.267] Sending to peer                              module=p2p peer=789ce20800fcb3f23a5f1412496bc881b6418bcc msgBytes=0A13080110011806200F28FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:55.267] Sending to peer                              module=p2p peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 msgBytes=0A13080110011806200F28FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:55.269] adding vote                                  module=consensus vote_height=1 vote_type=SIGNED_MSG_TYPE_PRECOMMIT val_index=0 cs_height=1 block_id= vote_round=1
+D[2022-01-20|15:30:55.273] Broadcast                                    module=p2p channel=32 msgBytes=3A06080110011802
+D[2022-01-20|15:30:55.273] Sending to peer                              module=p2p peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c msgBytes=3A06080110011802
+D[2022-01-20|15:30:55.274] Sending to peer                              module=p2p peer=789ce20800fcb3f23a5f1412496bc881b6418bcc msgBytes=3A06080110011802
+D[2022-01-20|15:30:55.274] Sending to peer                              module=p2p peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 msgBytes=3A06080110011802
+I[2022-01-20|15:30:55.275] added vote to precommit                      module=consensus vote="Vote{0:63145AEFE40D 1/01/SIGNED_MSG_TYPE_PRECOMMIT(Precommit) 000000000000 BE27AA4A6C97 @ 2022-01-20T15:30:55.231282305Z}" precommits="VoteSet{H:1 R:1 T:SIGNED_MSG_TYPE_PRECOMMIT +2/3:<nil>(0.5) BA{4:x__x} map[]}"
+D[2022-01-20|15:30:55.275] attempt to update stats for non-existent peer module=consensus peer=
+D[2022-01-20|15:30:55.366] sending vote message                         module=consensus ps="PeerState{\n  Key        53aac1a7619a471bf1ce3ad367ce7b06ae84865c\n  RoundState PeerRoundState{\n    1/1/RoundStepPrevoteWait @2022-01-20 15:30:40.220046928 +0000 UTC\n    Proposal 1:C3AEFBE0B8CE -> BA{1:x}\n    POL      BA{4:____} (round -1)\n    Prevotes   BA{4:xx_x}\n    Precommits BA{4:___x}\n    LastCommit nil-BitArray (round -1)\n    Catchup    BA{4:xx_x} (round 0)\n  }\n  Stats      peerStateStats{votes: 3, blockParts: 0}\n}" vote="Vote{0:63145AEFE40D 1/01/SIGNED_MSG_TYPE_PRECOMMIT(Precommit) 000000000000 BE27AA4A6C97 @ 2022-01-20T15:30:55.231282305Z}"
+D[2022-01-20|15:30:55.367] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PRECOMMIT index=0
+D[2022-01-20|15:30:55.367] picked rs.Precommits(prs.Round) to send      module=consensus height=1 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c round=1
+D[2022-01-20|15:30:55.367] no votes to send; sleeping                   module=consensus peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c rs.Height=1 prs.Height=1 localPV=BA{4:xx_x} peerPV=BA{4:xx_x} localPC=BA{4:x__x} peerPC=BA{4:x__x}
+D[2022-01-20|15:30:55.368] sending vote message                         module=consensus ps="PeerState{\n  Key        789ce20800fcb3f23a5f1412496bc881b6418bcc\n  RoundState PeerRoundState{\n    1/1/RoundStepPrecommit @2022-01-20 15:30:40.00747172 +0000 UTC\n    Proposal 1:C3AEFBE0B8CE -> BA{1:x}\n    POL      BA{4:____} (round -1)\n    Prevotes   BA{4:xxxx}\n    Precommits BA{4:__xx}\n    LastCommit nil-BitArray (round -1)\n    Catchup    BA{4:xxxx} (round 0)\n  }\n  Stats      peerStateStats{votes: 0, blockParts: 1}\n}" vote="Vote{0:63145AEFE40D 1/01/SIGNED_MSG_TYPE_PRECOMMIT(Precommit) 000000000000 BE27AA4A6C97 @ 2022-01-20T15:30:55.231282305Z}"
+D[2022-01-20|15:30:55.368] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PRECOMMIT index=0
+D[2022-01-20|15:30:55.368] picked rs.Precommits(prs.Round) to send      module=consensus height=1 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc round=1
+D[2022-01-20|15:30:55.368] no votes to send; sleeping                   module=consensus peer=789ce20800fcb3f23a5f1412496bc881b6418bcc rs.Height=1 prs.Height=1 localPV=BA{4:xx_x} peerPV=BA{4:xxxx} localPC=BA{4:x__x} peerPC=BA{4:x_xx}
+D[2022-01-20|15:30:55.368] sending vote message                         module=consensus ps="PeerState{\n  Key        5255c86ba259d3c93cc93f4ce130f117be0bdc18\n  RoundState PeerRoundState{\n    1/1/RoundStepPrecommit @2022-01-20 15:30:40.094427678 +0000 UTC\n    Proposal 1:C3AEFBE0B8CE -> BA{1:x}\n    POL      BA{4:____} (round -1)\n    Prevotes   BA{4:xx_x}\n    Precommits BA{4:___x}\n    LastCommit nil-BitArray (round -1)\n    Catchup    BA{4:xx_x} (round 0)\n  }\n  Stats      peerStateStats{votes: 4, blockParts: 0}\n}" vote="Vote{0:63145AEFE40D 1/01/SIGNED_MSG_TYPE_PRECOMMIT(Precommit) 000000000000 BE27AA4A6C97 @ 2022-01-20T15:30:55.231282305Z}"
+D[2022-01-20|15:30:55.369] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PRECOMMIT index=0
+D[2022-01-20|15:30:55.369] picked rs.Precommits(prs.Round) to send      module=consensus height=1 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 round=1
+D[2022-01-20|15:30:55.369] no votes to send; sleeping                   module=consensus peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 rs.Height=1 prs.Height=1 localPV=BA{4:xx_x} peerPV=BA{4:xx_x} localPC=BA{4:x__x} peerPC=BA{4:x__x}
+D[2022-01-20|15:30:55.488] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:55.489] received message                             module=consensus ch_id=32 message="[HasVote VI:0 V:{1/01/SIGNED_MSG_TYPE_PRECOMMIT}]" peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:55.500] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PRECOMMIT index=0
+D[2022-01-20|15:30:55.514] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:55.522] received message                             module=consensus ch_id=32 message="[HasVote VI:1 V:{1/01/SIGNED_MSG_TYPE_PRECOMMIT}]" peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:55.556] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PRECOMMIT index=1
+D[2022-01-20|15:30:55.559] received message                             module=consensus ch_id=32 message="[HasVote VI:0 V:{1/01/SIGNED_MSG_TYPE_PRECOMMIT}]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:55.563] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PRECOMMIT index=0
+D[2022-01-20|15:30:55.567] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:55.568] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:55.568] received message                             module=consensus ch_id=32 message="[NewRoundStep H:1 R:1 S:RoundStepPrecommit LCR:-1]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:55.605] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:55.606] received message                             module=consensus ch_id=32 message="[NewRoundStep H:1 R:1 S:RoundStepPrecommit LCR:-1]" peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:55.613] received message                             module=consensus ch_id=32 message="[HasVote VI:0 V:{1/01/SIGNED_MSG_TYPE_PRECOMMIT}]" peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:55.616] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PRECOMMIT index=0
+D[2022-01-20|15:30:55.612] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:55.691] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:55.694] received message                             module=consensus ch_id=32 message="[NewRoundStep H:1 R:1 S:RoundStepPrecommit LCR:-1]" peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:55.726] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=34 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:55.727] received message                             module=consensus ch_id=34 message="[Vote Vote{1:A3BFEF2477F9 1/01/SIGNED_MSG_TYPE_PRECOMMIT(Precommit) 000000000000 CE1DAE73657D @ 2022-01-20T15:30:55.393574055Z}]" peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:55.727] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PRECOMMIT index=1
+D[2022-01-20|15:30:55.728] Received vote                                module=consensus peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c ch_id=VoteChannel type=SIGNED_MSG_TYPE_PRECOMMIT block_id=
+D[2022-01-20|15:30:55.728] adding vote                                  module=consensus vote_height=1 vote_type=SIGNED_MSG_TYPE_PRECOMMIT val_index=1 cs_height=1 block_id= vote_round=1
+I[2022-01-20|15:30:55.731] added vote to precommit                      module=consensus vote="Vote{1:A3BFEF2477F9 1/01/SIGNED_MSG_TYPE_PRECOMMIT(Precommit) 000000000000 CE1DAE73657D @ 2022-01-20T15:30:55.393574055Z}" precommits="VoteSet{H:1 R:1 T:SIGNED_MSG_TYPE_PRECOMMIT +2/3::0:000000000000(0.75) BA{4:xx_x} map[]}"
+D[2022-01-20|15:30:55.732] entering new round with invalid args         module=consensus height=1 round=1 current=1/1/RoundStepPrecommit
+D[2022-01-20|15:30:55.732] entering precommit step with invalid args    module=consensus height=1 round=1 current=1/1/RoundStepPrecommit
+D[2022-01-20|15:30:55.732] entering precommit wait step                 module=consensus height=1 round=1 current=1/1/RoundStepPrecommit
+D[2022-01-20|15:30:55.734] Broadcast                                    module=p2p channel=32 msgBytes=3A080801100118022001
+D[2022-01-20|15:30:55.734] Sending to peer                              module=p2p peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c msgBytes=3A080801100118022001
+D[2022-01-20|15:30:55.734] Sending to peer                              module=p2p peer=789ce20800fcb3f23a5f1412496bc881b6418bcc msgBytes=3A080801100118022001
+D[2022-01-20|15:30:55.734] Sending to peer                              module=p2p peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 msgBytes=3A080801100118022001
+D[2022-01-20|15:30:55.735] Received tick                                module=consensus old_ti="{TimeDuration:3.5s Height:1 Round:1 Step:RoundStepPrevoteWait}" new_ti="{TimeDuration:3.5s Height:1 Round:1 Step:RoundStepPrecommitWait}"
+D[2022-01-20|15:30:55.743] Broadcast                                    module=p2p channel=32 msgBytes=0A13080110011806201028FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:55.743] Sending to peer                              module=p2p peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c msgBytes=0A13080110011806201028FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:55.743] Sending to peer                              module=p2p peer=789ce20800fcb3f23a5f1412496bc881b6418bcc msgBytes=0A13080110011806201028FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:55.743] Sending to peer                              module=p2p peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 msgBytes=0A13080110011806201028FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:55.744] Timer already stopped                        module=consensus 
+D[2022-01-20|15:30:55.744] Scheduled timeout                            module=consensus dur=3.5s height=1 round=1 step=RoundStepPrecommitWait
+D[2022-01-20|15:30:55.761] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:55.763] received message                             module=consensus ch_id=32 message="[HasVote VI:1 V:{1/01/SIGNED_MSG_TYPE_PRECOMMIT}]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:55.763] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PRECOMMIT index=1
+D[2022-01-20|15:30:55.792] sending vote message                         module=consensus ps="PeerState{\n  Key        5255c86ba259d3c93cc93f4ce130f117be0bdc18\n  RoundState PeerRoundState{\n    1/1/RoundStepPrecommit @2022-01-20 15:30:40.094427678 +0000 UTC\n    Proposal 1:C3AEFBE0B8CE -> BA{1:x}\n    POL      BA{4:____} (round -1)\n    Prevotes   BA{4:xx_x}\n    Precommits BA{4:x__x}\n    LastCommit nil-BitArray (round -1)\n    Catchup    BA{4:x__x} (round 1)\n  }\n  Stats      peerStateStats{votes: 4, blockParts: 0}\n}" vote="Vote{1:A3BFEF2477F9 1/01/SIGNED_MSG_TYPE_PRECOMMIT(Precommit) 000000000000 CE1DAE73657D @ 2022-01-20T15:30:55.393574055Z}"
+D[2022-01-20|15:30:55.797] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PRECOMMIT index=1
+D[2022-01-20|15:30:55.806] picked rs.Precommits(prs.Round) to send      module=consensus height=1 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 round=1
+D[2022-01-20|15:30:55.811] no votes to send; sleeping                   module=consensus peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 rs.Height=1 prs.Height=1 localPV=BA{4:xx_x} peerPV=BA{4:xx_x} localPC=BA{4:xx_x} peerPC=BA{4:xx_x}
+D[2022-01-20|15:30:55.814] received message                             module=consensus ch_id=32 message="[HasVote VI:1 V:{1/01/SIGNED_MSG_TYPE_PRECOMMIT}]" peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:55.814] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:55.825] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PRECOMMIT index=1
+D[2022-01-20|15:30:55.843] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=34 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:55.845] received message                             module=consensus ch_id=34 message="[Vote Vote{1:A3BFEF2477F9 1/01/SIGNED_MSG_TYPE_PRECOMMIT(Precommit) 000000000000 CE1DAE73657D @ 2022-01-20T15:30:55.393574055Z}]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:55.849] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PRECOMMIT index=1
+D[2022-01-20|15:30:55.849] Received vote                                module=consensus peer=789ce20800fcb3f23a5f1412496bc881b6418bcc ch_id=VoteChannel type=SIGNED_MSG_TYPE_PRECOMMIT block_id=
+D[2022-01-20|15:30:55.850] adding vote                                  module=consensus vote_height=1 vote_type=SIGNED_MSG_TYPE_PRECOMMIT val_index=1 cs_height=1 block_id= vote_round=1
+D[2022-01-20|15:30:55.909] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:55.909] received message                             module=consensus ch_id=32 message="[NewRoundStep H:1 R:1 S:RoundStepPrecommit LCR:-1]" peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:55.929] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=34 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:55.929] received message                             module=consensus ch_id=34 message="[Vote Vote{1:A3BFEF2477F9 1/01/SIGNED_MSG_TYPE_PRECOMMIT(Precommit) 000000000000 CE1DAE73657D @ 2022-01-20T15:30:55.393574055Z}]" peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:55.929] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PRECOMMIT index=1
+D[2022-01-20|15:30:55.929] Received vote                                module=consensus peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 ch_id=VoteChannel type=SIGNED_MSG_TYPE_PRECOMMIT block_id=
+D[2022-01-20|15:30:55.930] adding vote                                  module=consensus vote_height=1 vote_type=SIGNED_MSG_TYPE_PRECOMMIT val_index=1 cs_height=1 block_id= vote_round=1
+D[2022-01-20|15:30:56.155] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:56.155] received message                             module=consensus ch_id=32 message="[VSM23 1/01/SIGNED_MSG_TYPE_PRECOMMIT :0:000000000000]" peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:56.156] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:56.156] received message                             module=consensus ch_id=32 message="[VSM23 1/01/SIGNED_MSG_TYPE_PREVOTE 7D5DC55F58C47E0EF51D884C27B2FB549F4CAFB67DFA42E9F1DA87CE8BC28724:1:C3AEFBE0B8CE]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:56.191] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=35 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:56.191] received message                             module=consensus ch_id=35 message="[VSB 1/01/SIGNED_MSG_TYPE_PRECOMMIT :0:000000000000 BA{4:xx_x}]" peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:56.240] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=35 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:56.240] received message                             module=consensus ch_id=35 message="[VSB 1/01/SIGNED_MSG_TYPE_PRECOMMIT :0:000000000000 BA{4:xx_x}]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:56.424] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:56.424] received message                             module=consensus ch_id=32 message="[HasVote VI:3 V:{1/01/SIGNED_MSG_TYPE_PRECOMMIT}]" peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:56.424] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PRECOMMIT index=3
+D[2022-01-20|15:30:56.757] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=35 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:56.757] received message                             module=consensus ch_id=35 message="[VSB 1/01/SIGNED_MSG_TYPE_PRECOMMIT :0:000000000000 BA{4:xx_x}]" peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:56.774] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:56.776] received message                             module=consensus ch_id=32 message="[VSM23 1/01/SIGNED_MSG_TYPE_PREVOTE 7D5DC55F58C47E0EF51D884C27B2FB549F4CAFB67DFA42E9F1DA87CE8BC28724:1:C3AEFBE0B8CE]" peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:56.877] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=34 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:56.877] received message                             module=consensus ch_id=34 message="[Vote Vote{3:F61B45CED157 1/01/SIGNED_MSG_TYPE_PREVOTE(Prevote) 000000000000 E1062B4367D4 @ 2022-01-20T15:30:51.321933594Z}]" peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:56.877] setHasVote                                   module=consensus peerH/R=1/1 H/R=1/1 type=SIGNED_MSG_TYPE_PREVOTE index=3
+D[2022-01-20|15:30:56.877] Received vote                                module=consensus peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 ch_id=VoteChannel type=SIGNED_MSG_TYPE_PREVOTE block_id=
+D[2022-01-20|15:30:56.881] adding vote                                  module=consensus vote_height=1 vote_type=SIGNED_MSG_TYPE_PREVOTE val_index=3 cs_height=1 block_id= vote_round=1
+D[2022-01-20|15:30:58.153] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:58.153] received message                             module=consensus ch_id=32 message="[VSM23 1/01/SIGNED_MSG_TYPE_PRECOMMIT :0:000000000000]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:58.724] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:58.725] received message                             module=consensus ch_id=32 message="[VSM23 1/01/SIGNED_MSG_TYPE_PRECOMMIT :0:000000000000]" peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:59.019] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:59.019] received message                             module=consensus ch_id=32 message="[NewRoundStep H:1 R:2 S:RoundStepPropose LCR:-1]" peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:30:59.069] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:59.069] received message                             module=consensus ch_id=32 message="[NewRoundStep H:1 R:2 S:RoundStepPropose LCR:-1]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:59.141] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:59.141] received message                             module=consensus ch_id=32 message="[NewRoundStep H:1 R:2 S:RoundStepPrevote LCR:-1]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:59.180] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:59.180] received message                             module=consensus ch_id=32 message="[HasVote VI:2 V:{1/02/SIGNED_MSG_TYPE_PREVOTE}]" peer=789ce20800fcb3f23a5f1412496bc881b6418bcc
+D[2022-01-20|15:30:59.180] setHasVote                                   module=consensus peerH/R=1/2 H/R=1/2 type=SIGNED_MSG_TYPE_PREVOTE index=2
+D[2022-01-20|15:30:59.225] proxied envelope                             module=consensus reactor=ConsensusShim ch_id=32 peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:30:59.225] received message                             module=consensus ch_id=32 message="[NewRoundStep H:1 R:2 S:RoundStepPropose LCR:-1]" peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+I[2022-01-20|15:30:59.245] Timed out                                    module=consensus dur=3.5s height=1 round=1 step=RoundStepPrecommitWait
+D[2022-01-20|15:30:59.245] received tock                                module=consensus timeout=3.5s height=1 round=1 step=RoundStepPrecommitWait
+D[2022-01-20|15:30:59.245] entering precommit step with invalid args    module=consensus height=1 round=1 current=1/1/RoundStepPrecommit
+D[2022-01-20|15:30:59.245] entering new round                           module=consensus height=1 round=2 current=1/1/RoundStepPrecommit
+D[2022-01-20|15:30:59.254] resetting proposal info                      module=consensus height=1 round=2
+D[2022-01-20|15:30:59.254] entering propose step                        module=consensus height=1 round=2 current=1/2/RoundStepNewRound
+D[2022-01-20|15:30:59.254] node is a validator                          module=consensus height=1 round=2
+D[2022-01-20|15:30:59.254] propose step; not our turn to propose        module=consensus height=1 round=2 proposer=EC5E49B07A492DCE6646A6C8311C3285EFBCD39E
+D[2022-01-20|15:30:59.256] Received tick                                module=consensus old_ti="{TimeDuration:3.5s Height:1 Round:1 Step:RoundStepPrecommitWait}" new_ti="{TimeDuration:4s Height:1 Round:2 Step:RoundStepPropose}"
+D[2022-01-20|15:30:59.256] Timer already stopped                        module=consensus 
+D[2022-01-20|15:30:59.256] Scheduled timeout                            module=consensus dur=4s height=1 round=2 step=RoundStepPropose
+D[2022-01-20|15:30:59.260] Broadcast                                    module=p2p channel=32 msgBytes=0A13080110021803201328FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:59.260] Sending to peer                              module=p2p peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c msgBytes=0A13080110021803201328FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:59.260] Sending to peer                              module=p2p peer=789ce20800fcb3f23a5f1412496bc881b6418bcc msgBytes=0A13080110021803201328FFFFFFFFFFFFFFFFFF01
+D[2022-01-20|15:30:59.260] Sending to peer                              module=p2p peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 msgBytes=0A13080110021803201328FFFFFFFFFFFFFFFFFF01
+I[2022-01-20|15:30:59.288] Received directive                           module=p2p directive=RESTART
+I[2022-01-20|15:30:59.288] Restarting node                              module=main 
+I[2022-01-20|15:30:59.296] Stopping node                                module=main 
+I[2022-01-20|15:30:59.297] Stopping Node service                        module=main impl=Node
+I[2022-01-20|15:30:59.297] Stopping Node                                module=main 
+I[2022-01-20|15:30:59.297] Stopping EventBus service                    module=events impl=EventBus
+I[2022-01-20|15:30:59.297] Stopping PubSub service                      module=pubsub impl=PubSub
+I[2022-01-20|15:30:59.298] Stopping IndexerService service              module=txindex impl=IndexerService
+I[2022-01-20|15:30:59.298] Stopping Blockchain service                  module=blockchain impl=Blockchain
+D[2022-01-20|15:30:59.308] Stopping BlockPool service (already stopped) module=blockpool impl=BlockPool
+E[2022-01-20|15:30:59.319] failed to stop pool                          module=blockchain err="already stopped"
+D[2022-01-20|15:30:59.323] stopped listening on blockchain channel; closing... module=blockchain 
+D[2022-01-20|15:30:59.324] stopped listening on peer updates channel; closing... module=blockchain 
+I[2022-01-20|15:30:59.324] Stopping Consensus service                   module=consensus impl=ConsensusReactor
+I[2022-01-20|15:30:59.326] Stopping State service                       module=consensus impl=ConsensusState
+I[2022-01-20|15:30:59.329] Stopping TimeoutTicker service               module=consensus impl=TimeoutTicker
+I[2022-01-20|15:30:59.329] Stopping baseWAL service                     module=consensus wal=/tendermint/node1/data/cs.wal/wal impl=baseWAL
+I[2022-01-20|15:30:59.333] Stopping Group service                       module=consensus wal=/tendermint/node1/data/cs.wal/wal impl=Group
+D[2022-01-20|15:31:00.673] stopped listening on StateChannel; closing... module=consensus 
+D[2022-01-20|15:31:00.673] stopped listening on peer updates channel; closing... module=consensus 
+D[2022-01-20|15:31:00.673] stopped listening on VoteChannel; closing... module=consensus 
+D[2022-01-20|15:31:00.674] stopped listening on VoteSetBitsChannel; closing... module=consensus 
+D[2022-01-20|15:31:00.674] stopped listening on DataChannel; closing... module=consensus 
+I[2022-01-20|15:31:00.674] Stopping StateSync service                   module=statesync impl=StateSync
+D[2022-01-20|15:31:00.675] stopped listening on snapshot channel; closing... module=statesync 
+D[2022-01-20|15:31:00.675] stopped listening on peer updates channel; closing... module=statesync 
+D[2022-01-20|15:31:00.675] stopped listening on chunk channel; closing... module=statesync 
+I[2022-01-20|15:31:00.675] Stopping Mempool service                     module=mempool impl=Mempool
+D[2022-01-20|15:31:00.676] stopped listening on mempool channel; closing... module=mempool 
+D[2022-01-20|15:31:00.676] stopped listening on peer updates channel; closing... module=mempool 
+I[2022-01-20|15:31:00.676] Stopping Evidence service                    module=evidence impl=Evidence
+D[2022-01-20|15:31:00.677] stopped listening on evidence channel; closing... module=evidence 
+D[2022-01-20|15:31:00.677] stopped listening on peer updates channel; closing... module=evidence 
+I[2022-01-20|15:31:00.677] Stopping P2P Switch service                  module=p2p impl="P2P Switch"
+I[2022-01-20|15:31:00.677] Stopping Peer service                        module=p2p peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c@192.167.10.2:26656 impl="Peer{mconn://192.167.10.2:26656 53aac1a7619a471bf1ce3ad367ce7b06ae84865c out}"
+I[2022-01-20|15:31:00.680] Stopping MConnection service                 module=p2p peer=mconn://53aac1a7619a471bf1ce3ad367ce7b06ae84865c@192.167.10.2:26656 impl=MConn{192.167.10.2:26656}
+I[2022-01-20|15:31:00.684] Stopping Peer service                        module=p2p peer=789ce20800fcb3f23a5f1412496bc881b6418bcc@192.167.10.4:26656 impl="Peer{mconn://192.167.10.4:26656 789ce20800fcb3f23a5f1412496bc881b6418bcc out}"
+I[2022-01-20|15:31:00.686] Stopping MConnection service                 module=p2p peer=mconn://789ce20800fcb3f23a5f1412496bc881b6418bcc@192.167.10.4:26656 impl=MConn{192.167.10.4:26656}
+I[2022-01-20|15:31:00.698] Stopping Peer service                        module=p2p peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18@192.167.10.5:26656 impl="Peer{mconn://192.167.10.5:26656 5255c86ba259d3c93cc93f4ce130f117be0bdc18 out}"
+I[2022-01-20|15:31:00.699] Stopping MConnection service                 module=p2p peer=mconn://5255c86ba259d3c93cc93f4ce130f117be0bdc18@192.167.10.5:26656 impl=MConn{192.167.10.5:26656}
+D[2022-01-20|15:31:00.710] Switch: Stopping reactors                    module=p2p 
+I[2022-01-20|15:31:00.711] Stopping MempoolShim service                 module=mempool impl=MempoolShim
+I[2022-01-20|15:31:00.711] Stopping BlockchainShim service              module=blockchain impl=BlockchainShim
+I[2022-01-20|15:31:00.711] Stopping ConsensusShim service               module=consensus impl=ConsensusShim
+I[2022-01-20|15:31:00.713] Stopping EvidenceShim service                module=evidence impl=EvidenceShim
+I[2022-01-20|15:31:00.713] Stopping StateSyncShim service               module=statesync impl=StateSyncShim
+I[2022-01-20|15:31:00.714] Stopping PEX service                         module=pex impl=PEX
+I[2022-01-20|15:31:00.714] Stopping AddrBook service                    module=p2p book=/tendermint/node1/config/addrbook.json impl=AddrBook
+I[2022-01-20|15:31:00.715] Closing rpc listener                         module=main listener="&{Listener:0xc0005e45b8 sem:0xc0005d3080 closeOnce:{done:0 m:{state:0 sema:0}} done:0xc0005d30e0}"
+I[2022-01-20|15:31:00.717] Saving AddrBook to file                      module=p2p book=/tendermint/node1/config/addrbook.json size=4
+I[2022-01-20|15:31:00.716] RPC HTTP server stopped                      module=rpc-server err="accept tcp [::]:26657: use of closed network connection"
+E[2022-01-20|15:31:00.718] Error serving server                         module=main err="accept tcp [::]:26657: use of closed network connection"
+I[2022-01-20|15:31:01.266] Starting multiAppConn service                module=proxy impl=multiAppConn
+I[2022-01-20|15:31:01.266] Starting localClient service                 module=abci-client connection=query impl=localClient
+I[2022-01-20|15:31:01.267] Starting localClient service                 module=abci-client connection=snapshot impl=localClient
+I[2022-01-20|15:31:01.267] Starting localClient service                 module=abci-client connection=mempool impl=localClient
+I[2022-01-20|15:31:01.267] Starting localClient service                 module=abci-client connection=consensus impl=localClient
+I[2022-01-20|15:31:01.268] Starting EventBus service                    module=events impl=EventBus
+I[2022-01-20|15:31:01.268] Starting PubSub service                      module=pubsub impl=PubSub
+I[2022-01-20|15:31:01.412] Starting IndexerService service              module=txindex impl=IndexerService
+I[2022-01-20|15:31:01.415] ABCI Handshake App Info                      module=consensus height=0 hash= software-version=0.17.0 protocol-version=1
+I[2022-01-20|15:31:01.422] ABCI Replay Blocks                           module=consensus appHeight=0 storeHeight=0 stateHeight=0
+I[2022-01-20|15:31:01.437] Completed ABCI Handshake - Tendermint and App are synced module=consensus appHeight=0 appHash=
+I[2022-01-20|15:31:01.438] Version info                                 module=main software=unreleased-pct-instrumentation-51c94d4408f96a6e318697c2dae6fedc6a65bcbe block=11 p2p=8
+I[2022-01-20|15:31:01.439] This node is a validator                     module=consensus addr=63145AEFE40D5D88B3A7449A294A245CF91862FB pubKey=PubKeyEd25519{02BE596EBDA7C973980A94206C6550B6940429ABBC9062D45F12F3B8D7F1BFF6}
+I[2022-01-20|15:31:01.674] P2P Node ID                                  module=p2p ID=15458389558225f03b7d461ac7db71b220155010 file=/tendermint/node1/config/node_key.json
+I[2022-01-20|15:31:01.674] Adding persistent peers                      module=p2p addrs="[53aac1a7619a471bf1ce3ad367ce7b06ae84865c@192.167.10.2:26656 15458389558225f03b7d461ac7db71b220155010@192.167.10.3:26656 789ce20800fcb3f23a5f1412496bc881b6418bcc@192.167.10.4:26656 5255c86ba259d3c93cc93f4ce130f117be0bdc18@192.167.10.5:26656]"
+I[2022-01-20|15:31:01.676] Adding unconditional peer ids                module=p2p ids=[]
+I[2022-01-20|15:31:01.689] Add our address to book                      module=p2p book=/tendermint/node1/config/addrbook.json addr=15458389558225f03b7d461ac7db71b220155010@0.0.0.0:26656
+I[2022-01-20|15:31:01.690] Created node                                 module=main 
+I[2022-01-20|15:31:01.690] Starting node                                module=main 
+I[2022-01-20|15:31:01.690] Starting Node service                        module=main impl=Node
+I[2022-01-20|15:31:01.691] p2p service                                  module=main legacy_enabled=true
+I[2022-01-20|15:31:01.691] Starting P2P Switch service                  module=p2p impl="P2P Switch"
+I[2022-01-20|15:31:01.691] Starting BlockchainShim service              module=blockchain impl=BlockchainShim
+I[2022-01-20|15:31:01.691] Starting ConsensusShim service               module=consensus impl=ConsensusShim
+I[2022-01-20|15:31:01.691] Starting EvidenceShim service                module=evidence impl=EvidenceShim
+I[2022-01-20|15:31:01.691] Starting StateSyncShim service               module=statesync impl=StateSyncShim
+I[2022-01-20|15:31:01.691] Starting PEX service                         module=pex impl=PEX
+I[2022-01-20|15:31:01.692] Starting AddrBook service                    module=p2p book=/tendermint/node1/config/addrbook.json impl=AddrBook
+I[2022-01-20|15:31:01.692] Starting pprof server                        module=main laddr=:6060
+E[2022-01-20|15:31:01.692] pprof server error                           module=main err="listen tcp :6060: bind: address already in use"
+I[2022-01-20|15:31:01.693] Starting RPC HTTP server on [::]:26657       module=rpc-server 
+I[2022-01-20|15:31:01.716] Starting MempoolShim service                 module=mempool impl=MempoolShim
+I[2022-01-20|15:31:01.718] Ensure peers                                 module=pex numOutPeers=0 numInPeers=0 numDialing=0 numToDial=10
+I[2022-01-20|15:31:01.719] Starting Blockchain service                  module=blockchain impl=Blockchain
+I[2022-01-20|15:31:01.721] Starting BlockPool service                   module=blockpool impl=BlockPool
+I[2022-01-20|15:31:01.721] Starting Consensus service                   module=consensus impl=ConsensusReactor
+I[2022-01-20|15:31:01.721] Will dial address                            module=pex addr=5255c86ba259d3c93cc93f4ce130f117be0bdc18@192.167.10.5:26656
+D[2022-01-20|15:31:01.721] consensus wait sync                          module=consensus wait_sync=true
+I[2022-01-20|15:31:01.722] Will dial address                            module=pex addr=15458389558225f03b7d461ac7db71b220155010@192.167.10.3:26656
+I[2022-01-20|15:31:01.722] Starting StateSync service                   module=statesync impl=StateSync
+I[2022-01-20|15:31:01.722] Starting Mempool service                     module=mempool impl=Mempool
+I[2022-01-20|15:31:01.722] Will dial address                            module=pex addr=53aac1a7619a471bf1ce3ad367ce7b06ae84865c@192.167.10.2:26656
+I[2022-01-20|15:31:01.722] Starting Evidence service                    module=evidence impl=Evidence
+I[2022-01-20|15:31:01.722] Will dial address                            module=pex addr=789ce20800fcb3f23a5f1412496bc881b6418bcc@192.167.10.4:26656
+I[2022-01-20|15:31:01.728] Dialing peer                                 module=p2p address=15458389558225f03b7d461ac7db71b220155010@192.167.10.3:26656
+I[2022-01-20|15:31:01.731] Saving AddrBook to file                      module=p2p book=/tendermint/node1/config/addrbook.json size=4
+I[2022-01-20|15:31:01.733] Dialing peer                                 module=p2p address=789ce20800fcb3f23a5f1412496bc881b6418bcc@192.167.10.4:26656
+I[2022-01-20|15:31:01.733] Dialing peer                                 module=p2p address=53aac1a7619a471bf1ce3ad367ce7b06ae84865c@192.167.10.2:26656
+I[2022-01-20|15:31:01.735] Dialing peer                                 module=p2p address=5255c86ba259d3c93cc93f4ce130f117be0bdc18@192.167.10.5:26656
+I[2022-01-20|15:31:01.836] Starting MConnection service                 module=p2p peer=mconn://789ce20800fcb3f23a5f1412496bc881b6418bcc@192.167.10.4:26656 impl=MConn{192.167.10.4:26656}
+I[2022-01-20|15:31:01.852] Starting MConnection service                 module=p2p peer=mconn://5255c86ba259d3c93cc93f4ce130f117be0bdc18@192.167.10.5:26656 impl=MConn{192.167.10.5:26656}
+I[2022-01-20|15:31:01.860] Connection is closed @ recvRoutine (likely by the other side) module=p2p peer=mconn://5255c86ba259d3c93cc93f4ce130f117be0bdc18@192.167.10.5:26656 conn=MConn{192.167.10.5:26656}
+I[2022-01-20|15:31:01.860] Starting Peer service                        module=p2p peer=789ce20800fcb3f23a5f1412496bc881b6418bcc@192.167.10.4:26656 impl="Peer{mconn://192.167.10.4:26656 789ce20800fcb3f23a5f1412496bc881b6418bcc out}"
+I[2022-01-20|15:31:01.861] Stopping MConnection service                 module=p2p peer=mconn://5255c86ba259d3c93cc93f4ce130f117be0bdc18@192.167.10.5:26656 impl=MConn{192.167.10.5:26656}
+D[2022-01-20|15:31:01.861] received peer update                         module=mempool peer=789ce20800fcb3f23a5f1412496bc881b6418bcc status=up
+I[2022-01-20|15:31:01.858] Starting MConnection service                 module=p2p peer=mconn://53aac1a7619a471bf1ce3ad367ce7b06ae84865c@192.167.10.2:26656 impl=MConn{192.167.10.2:26656}
+D[2022-01-20|15:31:01.861] sent peer update                             module=mempool reactor=MempoolShim peer=789ce20800fcb3f23a5f1412496bc881b6418bcc status=up
+D[2022-01-20|15:31:01.863] sent peer update                             module=blockchain reactor=BlockchainShim peer=789ce20800fcb3f23a5f1412496bc881b6418bcc status=up
+D[2022-01-20|15:31:01.863] sent peer update                             module=consensus reactor=ConsensusShim peer=789ce20800fcb3f23a5f1412496bc881b6418bcc status=up
+D[2022-01-20|15:31:01.863] sent peer update                             module=evidence reactor=EvidenceShim peer=789ce20800fcb3f23a5f1412496bc881b6418bcc status=up
+D[2022-01-20|15:31:01.863] sent peer update                             module=statesync reactor=StateSyncShim peer=789ce20800fcb3f23a5f1412496bc881b6418bcc status=up
+I[2022-01-20|15:31:01.857] Connection is closed @ recvRoutine (likely by the other side) module=p2p peer=mconn://789ce20800fcb3f23a5f1412496bc881b6418bcc@192.167.10.4:26656 conn=MConn{192.167.10.4:26656}
+I[2022-01-20|15:31:01.865] Stopping MConnection service                 module=p2p peer=mconn://789ce20800fcb3f23a5f1412496bc881b6418bcc@192.167.10.4:26656 impl=MConn{192.167.10.4:26656}
+D[2022-01-20|15:31:01.867] received peer update                         module=blockchain peer=789ce20800fcb3f23a5f1412496bc881b6418bcc status=up
+D[2022-01-20|15:31:01.871] received peer update                         module=consensus peer=789ce20800fcb3f23a5f1412496bc881b6418bcc status=up
+D[2022-01-20|15:31:01.872] received peer update                         module=evidence peer=789ce20800fcb3f23a5f1412496bc881b6418bcc status=up
+D[2022-01-20|15:31:01.873] no votes to send; sleeping                   module=consensus peer=789ce20800fcb3f23a5f1412496bc881b6418bcc rs.Height=1 prs.Height=0 localPV=BA{4:____} peerPV=nil-BitArray localPC=BA{4:____} peerPC=nil-BitArray
+D[2022-01-20|15:31:01.876] Ignore attempt to connect to ourselves       module=p2p addr=15458389558225f03b7d461ac7db71b220155010@192.167.10.3:26656 ourAddr=15458389558225f03b7d461ac7db71b220155010@[::]:26656
+I[2022-01-20|15:31:01.882] Starting Peer service                        module=p2p peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18@192.167.10.5:26656 impl="Peer{mconn://192.167.10.5:26656 5255c86ba259d3c93cc93f4ce130f117be0bdc18 out}"
+D[2022-01-20|15:31:01.863] Request addrs                                module=pex from="Peer{mconn://192.167.10.4:26656 789ce20800fcb3f23a5f1412496bc881b6418bcc out}"
+D[2022-01-20|15:31:01.884] sent peer update                             module=blockchain reactor=BlockchainShim peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 status=up
+D[2022-01-20|15:31:01.885] sent peer update                             module=consensus reactor=ConsensusShim peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 status=up
+D[2022-01-20|15:31:01.885] sent peer update                             module=evidence reactor=EvidenceShim peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 status=up
+D[2022-01-20|15:31:01.885] received peer update                         module=evidence peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 status=up
+I[2022-01-20|15:31:01.885] Added peer                                   module=p2p peer="Peer{mconn://192.167.10.4:26656 789ce20800fcb3f23a5f1412496bc881b6418bcc out}"
+D[2022-01-20|15:31:01.889] received peer update                         module=blockchain peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 status=up
+D[2022-01-20|15:31:01.864] received peer update                         module=statesync peer=789ce20800fcb3f23a5f1412496bc881b6418bcc status=up
+D[2022-01-20|15:31:01.892] received peer update                         module=consensus peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 status=up
+D[2022-01-20|15:31:01.893] sent peer update                             module=statesync reactor=StateSyncShim peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 status=up
+I[2022-01-20|15:31:01.893] Starting Peer service                        module=p2p peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c@192.167.10.2:26656 impl="Peer{mconn://192.167.10.2:26656 53aac1a7619a471bf1ce3ad367ce7b06ae84865c out}"
+D[2022-01-20|15:31:01.892] received peer update                         module=statesync peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 status=up
+D[2022-01-20|15:31:01.894] Request addrs                                module=pex from="Peer{mconn://192.167.10.5:26656 5255c86ba259d3c93cc93f4ce130f117be0bdc18 out}"
+D[2022-01-20|15:31:01.894] sent peer update                             module=mempool reactor=MempoolShim peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c status=up
+D[2022-01-20|15:31:01.901] sent peer update                             module=blockchain reactor=BlockchainShim peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c status=up
+D[2022-01-20|15:31:01.901] sent peer update                             module=consensus reactor=ConsensusShim peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c status=up
+D[2022-01-20|15:31:01.902] sent peer update                             module=evidence reactor=EvidenceShim peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c status=up
+D[2022-01-20|15:31:01.902] sent peer update                             module=statesync reactor=StateSyncShim peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c status=up
+D[2022-01-20|15:31:01.902] Request addrs                                module=pex from="Peer{mconn://192.167.10.2:26656 53aac1a7619a471bf1ce3ad367ce7b06ae84865c out}"
+I[2022-01-20|15:31:01.902] Added peer                                   module=p2p peer="Peer{mconn://192.167.10.2:26656 53aac1a7619a471bf1ce3ad367ce7b06ae84865c out}"
+D[2022-01-20|15:31:01.902] received peer update                         module=statesync peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c status=up
+D[2022-01-20|15:31:01.909] received peer update                         module=mempool peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c status=up
+D[2022-01-20|15:31:01.910] received peer update                         module=mempool peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 status=up
+D[2022-01-20|15:31:01.914] Error dialing peer                           module=p2p err="connection with 53aac1a7619a471bf1ce3ad367ce7b06ae84865c@192.167.10.2:26656 has been established or dialed"
+D[2022-01-20|15:31:01.896] no votes to send; sleeping                   module=consensus peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 rs.Height=1 prs.Height=0 localPV=BA{4:____} peerPV=nil-BitArray localPC=BA{4:____} peerPC=nil-BitArray
+D[2022-01-20|15:31:01.915] received peer update                         module=blockchain peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c status=up
+D[2022-01-20|15:31:01.922] received peer update                         module=consensus peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c status=up
+D[2022-01-20|15:31:01.928] sent peer update                             module=mempool reactor=MempoolShim peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 status=up
+I[2022-01-20|15:31:01.928] Added peer                                   module=p2p peer="Peer{mconn://192.167.10.5:26656 5255c86ba259d3c93cc93f4ce130f117be0bdc18 out}"
+I[2022-01-20|15:31:01.928] Starting MConnection service                 module=p2p peer=mconn://15458389558225f03b7d461ac7db71b220155010@192.167.10.3:32986 impl=MConn{192.167.10.3:32986}
+I[2022-01-20|15:31:01.934] Stopping MConnection service                 module=p2p peer=mconn://15458389558225f03b7d461ac7db71b220155010@192.167.10.3:32986 impl=MConn{192.167.10.3:32986}
+D[2022-01-20|15:31:01.929] received peer update                         module=evidence peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c status=up
+I[2022-01-20|15:31:01.944] Remove address from book                     module=p2p book=/tendermint/node1/config/addrbook.json addr=15458389558225f03b7d461ac7db71b220155010@192.167.10.3:32986
+I[2022-01-20|15:31:01.945] Add our address to book                      module=p2p book=/tendermint/node1/config/addrbook.json addr=15458389558225f03b7d461ac7db71b220155010@192.167.10.3:32986
+I[2022-01-20|15:31:01.945] Inbound Peer rejected                        module=p2p err="self ID<15458389558225f03b7d461ac7db71b220155010>" numPeers=0
+D[2022-01-20|15:31:01.929] no votes to send; sleeping                   module=consensus peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c rs.Height=1 prs.Height=0 localPV=BA{4:____} peerPV=nil-BitArray localPC=BA{4:____} peerPC=nil-BitArray
+I[2022-01-20|15:31:01.930] Starting MConnection service                 module=p2p peer=mconn://15458389558225f03b7d461ac7db71b220155010@192.167.10.3:26656 impl=MConn{192.167.10.3:26656}
+I[2022-01-20|15:31:01.945] Stopping MConnection service                 module=p2p peer=mconn://15458389558225f03b7d461ac7db71b220155010@192.167.10.3:26656 impl=MConn{192.167.10.3:26656}
+I[2022-01-20|15:31:01.951] Remove address from book                     module=p2p book=/tendermint/node1/config/addrbook.json addr=15458389558225f03b7d461ac7db71b220155010@192.167.10.3:26656
+I[2022-01-20|15:31:01.951] Add our address to book                      module=p2p book=/tendermint/node1/config/addrbook.json addr=15458389558225f03b7d461ac7db71b220155010@192.167.10.3:26656
+E[2022-01-20|15:31:01.953] dialing failed (attempts: 1): self ID<15458389558225f03b7d461ac7db71b220155010> module=pex addr=15458389558225f03b7d461ac7db71b220155010@192.167.10.3:26656
+D[2022-01-20|15:31:02.744] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:02.750] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=58.970781166s
+I[2022-01-20|15:31:02.786] Starting MConnection service                 module=p2p peer=mconn://53aac1a7619a471bf1ce3ad367ce7b06ae84865c@192.167.10.2:39780 impl=MConn{192.167.10.2:39780}
+I[2022-01-20|15:31:02.791] Stopping MConnection service                 module=p2p peer=mconn://53aac1a7619a471bf1ce3ad367ce7b06ae84865c@192.167.10.2:39780 impl=MConn{192.167.10.2:39780}
+I[2022-01-20|15:31:02.793] Ignoring inbound connection: error while adding peer module=p2p err="duplicate ID<53aac1a7619a471bf1ce3ad367ce7b06ae84865c>" id=53aac1a7619a471bf1ce3ad367ce7b06ae84865c
+D[2022-01-20|15:31:02.961] Error dialing peer                           module=p2p err="connection with 5255c86ba259d3c93cc93f4ce130f117be0bdc18@192.167.10.5:26656 has been established or dialed"
+D[2022-01-20|15:31:03.744] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:03.747] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=57.974355499s
+D[2022-01-20|15:31:04.361] Error dialing peer                           module=p2p err="connection with 789ce20800fcb3f23a5f1412496bc881b6418bcc@192.167.10.4:26656 has been established or dialed"
+I[2022-01-20|15:31:04.403] Starting MConnection service                 module=p2p peer=mconn://789ce20800fcb3f23a5f1412496bc881b6418bcc@192.167.10.4:54296 impl=MConn{192.167.10.4:54296}
+E[2022-01-20|15:31:04.404] Won't start a peer - switch is not running   module=p2p peer="Peer{mconn://192.167.10.4:54296 789ce20800fcb3f23a5f1412496bc881b6418bcc in}"
+I[2022-01-20|15:31:04.511] Starting MConnection service                 module=p2p peer=mconn://5255c86ba259d3c93cc93f4ce130f117be0bdc18@192.167.10.5:51598 impl=MConn{192.167.10.5:51598}
+I[2022-01-20|15:31:04.516] Stopping MConnection service                 module=p2p peer=mconn://5255c86ba259d3c93cc93f4ce130f117be0bdc18@192.167.10.5:51598 impl=MConn{192.167.10.5:51598}
+I[2022-01-20|15:31:04.516] Ignoring inbound connection: error while adding peer module=p2p err="duplicate ID<5255c86ba259d3c93cc93f4ce130f117be0bdc18>" id=5255c86ba259d3c93cc93f4ce130f117be0bdc18
+D[2022-01-20|15:31:04.743] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:04.743] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=56.978461124s
+D[2022-01-20|15:31:05.743] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:05.744] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=55.977486665s
+D[2022-01-20|15:31:06.753] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:06.753] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=54.968271706s
+D[2022-01-20|15:31:07.743] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:07.753] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=53.968496539s
+D[2022-01-20|15:31:08.743] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:08.743] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=52.97801583s
+D[2022-01-20|15:31:09.743] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:09.743] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=51.977841538s
+D[2022-01-20|15:31:10.743] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:10.743] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=50.977995288s
+D[2022-01-20|15:31:11.745] Broadcast                                    module=p2p channel=64 msgBytes=2200
+D[2022-01-20|15:31:11.745] Sending to peer                              module=p2p peer=789ce20800fcb3f23a5f1412496bc881b6418bcc msgBytes=2200
+D[2022-01-20|15:31:11.745] Sending to peer                              module=p2p peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 msgBytes=2200
+D[2022-01-20|15:31:11.745] Sending to peer                              module=p2p peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c msgBytes=2200
+D[2022-01-20|15:31:11.757] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:11.775] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=49.946017579s
+D[2022-01-20|15:31:12.761] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:12.762] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=48.959143245s
+D[2022-01-20|15:31:13.743] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:13.743] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=47.978254203s
+D[2022-01-20|15:31:14.744] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:14.744] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=46.977266369s
+D[2022-01-20|15:31:15.745] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:15.745] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=45.976212327s
+D[2022-01-20|15:31:16.751] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:16.752] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=44.968800785s
+D[2022-01-20|15:31:17.743] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:17.744] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=43.977425534s
+D[2022-01-20|15:31:18.743] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:18.743] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=42.978230784s
+D[2022-01-20|15:31:19.762] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:19.763] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=41.958163033s
+D[2022-01-20|15:31:20.743] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:20.743] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=40.977675241s
+D[2022-01-20|15:31:21.743] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:21.743] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=39.978272157s
+D[2022-01-20|15:31:21.743] Broadcast                                    module=p2p channel=64 msgBytes=2200
+D[2022-01-20|15:31:21.743] Sending to peer                              module=p2p peer=789ce20800fcb3f23a5f1412496bc881b6418bcc msgBytes=2200
+D[2022-01-20|15:31:21.743] Sending to peer                              module=p2p peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 msgBytes=2200
+D[2022-01-20|15:31:21.744] Sending to peer                              module=p2p peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c msgBytes=2200
+D[2022-01-20|15:31:22.744] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:22.744] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=38.97721849s
+D[2022-01-20|15:31:23.766] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:23.767] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=37.95410799s
+D[2022-01-20|15:31:24.743] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:24.743] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=36.977783989s
+D[2022-01-20|15:31:25.753] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:25.754] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=35.967265739s
+D[2022-01-20|15:31:26.743] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:26.743] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=34.978285738s
+D[2022-01-20|15:31:27.745] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:27.745] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=33.97693253s
+D[2022-01-20|15:31:28.756] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:28.765] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=32.957428446s
+D[2022-01-20|15:31:29.746] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:29.746] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=31.976175571s
+D[2022-01-20|15:31:30.744] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:30.744] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=30.977679779s
+I[2022-01-20|15:31:31.729] Ensure peers                                 module=pex numOutPeers=3 numInPeers=0 numDialing=0 numToDial=7
+I[2022-01-20|15:31:31.729] We need more addresses. Sending pexRequest to random peer module=pex peer="Peer{mconn://192.167.10.4:26656 789ce20800fcb3f23a5f1412496bc881b6418bcc out}"
+I[2022-01-20|15:31:31.729] No addresses to dial. Falling back to seeds  module=pex 
+D[2022-01-20|15:31:31.744] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:31.744] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=29.978092528s
+D[2022-01-20|15:31:31.744] Broadcast                                    module=p2p channel=64 msgBytes=2200
+D[2022-01-20|15:31:31.744] Sending to peer                              module=p2p peer=789ce20800fcb3f23a5f1412496bc881b6418bcc msgBytes=2200
+D[2022-01-20|15:31:31.744] Sending to peer                              module=p2p peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 msgBytes=2200
+D[2022-01-20|15:31:31.744] Sending to peer                              module=p2p peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c msgBytes=2200
+D[2022-01-20|15:31:32.744] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:32.744] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=28.978289986s
+D[2022-01-20|15:31:33.763] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:33.764] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=27.958084736s
+D[2022-01-20|15:31:34.750] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:34.760] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=26.96194461s
+D[2022-01-20|15:31:35.744] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:35.750] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=25.972434651s
+D[2022-01-20|15:31:36.743] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:36.754] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=24.967633942s
+D[2022-01-20|15:31:37.744] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:37.744] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=23.977714275s
+D[2022-01-20|15:31:38.745] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:38.745] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=22.977234858s
+D[2022-01-20|15:31:39.744] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:39.744] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=21.978295066s
+D[2022-01-20|15:31:40.744] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:40.744] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=20.977948357s
+D[2022-01-20|15:31:41.744] Broadcast                                    module=p2p channel=64 msgBytes=2200
+D[2022-01-20|15:31:41.744] Sending to peer                              module=p2p peer=789ce20800fcb3f23a5f1412496bc881b6418bcc msgBytes=2200
+D[2022-01-20|15:31:41.744] Sending to peer                              module=p2p peer=5255c86ba259d3c93cc93f4ce130f117be0bdc18 msgBytes=2200
+D[2022-01-20|15:31:41.744] Sending to peer                              module=p2p peer=53aac1a7619a471bf1ce3ad367ce7b06ae84865c msgBytes=2200
+D[2022-01-20|15:31:41.744] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:41.744] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=19.977686482s
+D[2022-01-20|15:31:42.744] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:42.744] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=18.977498606s
+D[2022-01-20|15:31:43.753] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:43.763] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=17.959252647s
+D[2022-01-20|15:31:44.744] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:44.744] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=16.977838689s
+D[2022-01-20|15:31:45.744] consensus ticker                             module=blockchain num_pending=0 total=0 height=1
+I[2022-01-20|15:31:45.755] not caught up yet                            module=blockchain height=1 max_peer_height=0 timeout_in=15.967394771s

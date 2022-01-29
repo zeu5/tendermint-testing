@@ -1,0 +1,6 @@
+=============== Jan 21, 2022 (UTC) ===============
+14:19:24.010249 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+14:19:24.119005 db@open opening
+14:19:24.192937 version@stat F·[] S·0B[] Sc·[]
+14:19:24.232259 db@janitor F·2 G·0
+14:19:24.249221 db@open done T·119.755084ms
