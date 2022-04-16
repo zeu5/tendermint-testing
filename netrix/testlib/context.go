@@ -5,10 +5,13 @@ import (
 	"sync"
 
 	"github.com/netrixframework/netrix/context"
-	"github.com/netrixframework/netrix/dispatcher"
 	"github.com/netrixframework/netrix/log"
 	"github.com/netrixframework/netrix/types"
 	"github.com/netrixframework/netrix/util"
+)
+
+var (
+	partitionKey = "_partition"
 )
 
 // Context struct is passed to the calls of StateAction and Condition
@@ -25,30 +28,36 @@ type Context struct {
 	Vars *VarSet
 
 	counter     *util.Counter
-	dispatcher  *dispatcher.Dispatcher
 	testcase    *TestCase
-	reportStore *reportStore
+	reportStore *types.ReportStore
 	sends       map[string]*types.Event
 	lock        *sync.Mutex
 	once        *sync.Once
 }
 
 // newContext instantiates a Context from the RootContext
-func newContext(c *context.RootContext, testcase *TestCase, r *reportStore, d *dispatcher.Dispatcher) *Context {
+func newContext(c *context.RootContext, testcase *TestCase) *Context {
 	return &Context{
 		MessagePool: c.MessageStore,
 		Replicas:    c.Replicas,
-		EventDAG:    types.NewEventDag(),
+		EventDAG:    types.NewEventDag(c.Replicas),
 		Vars:        NewVarSet(),
 
 		counter:     util.NewCounter(),
-		reportStore: r,
-		dispatcher:  d,
+		reportStore: c.ReportStore,
 		testcase:    testcase,
 		sends:       make(map[string]*types.Event),
 		lock:        new(sync.Mutex),
 		once:        new(sync.Once),
 	}
+}
+
+func (c *Context) CreatePartition(sizes []int, labels []string) {
+	partition, err := NewPartition(c.Replicas, sizes, labels)
+	if err != nil {
+		return
+	}
+	c.Vars.Set(partitionKey, partition)
 }
 
 // Logger returns the logger for the current testcase

@@ -6,13 +6,13 @@ import (
 )
 
 type EventNodeSet struct {
-	nodes map[uint64]bool
+	nodes map[EventID]bool
 	lock  *sync.Mutex
 }
 
 func NewEventNodeSet() *EventNodeSet {
 	return &EventNodeSet{
-		nodes: make(map[uint64]bool),
+		nodes: make(map[EventID]bool),
 		lock:  new(sync.Mutex),
 	}
 }
@@ -24,23 +24,23 @@ func (d *EventNodeSet) Clone() *EventNodeSet {
 	}
 }
 
-func (d *EventNodeSet) Add(nid uint64) {
+func (d *EventNodeSet) Add(nid EventID) {
 	d.lock.Lock()
 	defer d.lock.Unlock()
 	d.nodes[nid] = true
 }
 
-func (d *EventNodeSet) Exists(nid uint64) bool {
+func (d *EventNodeSet) Exists(nid EventID) bool {
 	d.lock.Lock()
 	defer d.lock.Unlock()
 	_, ok := d.nodes[nid]
 	return ok
 }
 
-func (d *EventNodeSet) Iter() []uint64 {
+func (d *EventNodeSet) Iter() []EventID {
 	d.lock.Lock()
 	defer d.lock.Unlock()
-	nodes := make([]uint64, len(d.nodes))
+	nodes := make([]EventID, len(d.nodes))
 	i := 0
 	for k := range d.nodes {
 		nodes[i] = k
@@ -57,7 +57,7 @@ func (d *EventNodeSet) Size() int {
 
 func (d *EventNodeSet) MarshalJSON() ([]byte, error) {
 	d.lock.Lock()
-	nodes := make([]uint64, len(d.nodes))
+	nodes := make([]EventID, len(d.nodes))
 	i := 0
 	for n := range d.nodes {
 		nodes[i] = n
@@ -68,58 +68,67 @@ func (d *EventNodeSet) MarshalJSON() ([]byte, error) {
 }
 
 type EventNode struct {
-	Event    *Event `json:"event"`
-	prev     uint64
-	next     uint64
-	Parents  *EventNodeSet `json:"parents"`
-	Children *EventNodeSet `json:"children"`
-	dirty    bool
-	lock     *sync.Mutex
+	Event      *Event     `json:"event"`
+	ClockValue ClockValue `json:"-"`
+	prev       EventID
+	next       EventID
+	Parents    *EventNodeSet `json:"parents"`
+	Children   *EventNodeSet `json:"children"`
+	dirty      bool
+	lock       *sync.Mutex
 }
 
 func NewEventNode(e *Event) *EventNode {
 	return &EventNode{
-		Event:    e,
-		prev:     0,
-		next:     0,
-		Parents:  NewEventNodeSet(),
-		Children: NewEventNodeSet(),
-		dirty:    false,
-		lock:     new(sync.Mutex),
+		Event:      e,
+		ClockValue: nil,
+		prev:       0,
+		next:       0,
+		Parents:    NewEventNodeSet(),
+		Children:   NewEventNodeSet(),
+		dirty:      false,
+		lock:       new(sync.Mutex),
 	}
 }
 
 func (n *EventNode) Clone() *EventNode {
 	return &EventNode{
-		Event:    n.Event,
-		prev:     n.prev,
-		next:     n.next,
-		Parents:  n.Parents.Clone(),
-		Children: n.Children.Clone(),
-		dirty:    false,
-		lock:     new(sync.Mutex),
+		Event:      n.Event,
+		ClockValue: n.ClockValue,
+		prev:       n.prev,
+		next:       n.next,
+		Parents:    n.Parents.Clone(),
+		Children:   n.Children.Clone(),
+		dirty:      false,
+		lock:       new(sync.Mutex),
 	}
 }
 
-func (n *EventNode) SetNext(next uint64) {
+func (n *EventNode) SetClock(cv ClockValue) {
+	n.lock.Lock()
+	defer n.lock.Unlock()
+	n.ClockValue = cv
+}
+
+func (n *EventNode) SetNext(next EventID) {
 	n.lock.Lock()
 	defer n.lock.Unlock()
 	n.next = next
 }
 
-func (n *EventNode) GetNext() uint64 {
+func (n *EventNode) GetNext() EventID {
 	n.lock.Lock()
 	defer n.lock.Unlock()
 	return n.next
 }
 
-func (n *EventNode) SetPrev(prev uint64) {
+func (n *EventNode) SetPrev(prev EventID) {
 	n.lock.Lock()
 	defer n.lock.Unlock()
 	n.prev = prev
 }
 
-func (n *EventNode) GetPrev() uint64 {
+func (n *EventNode) GetPrev() EventID {
 	n.lock.Lock()
 	defer n.lock.Unlock()
 	return n.prev
@@ -150,51 +159,73 @@ func (n *EventNode) IsDirty() bool {
 	return n.dirty
 }
 
+func (n *EventNode) Lt(other *EventNode) bool {
+	if n.ClockValue == nil {
+		return true
+	}
+	if other.ClockValue == nil {
+		return false
+	}
+	return n.ClockValue.Lt(other.ClockValue)
+}
+
 type EventDAG struct {
-	nodes   map[uint64]*EventNode
-	strands map[ReplicaID]uint64
-	latest  map[ReplicaID]uint64
+	nodes   map[EventID]*EventNode
+	strands map[ReplicaID]EventID
+	latest  map[ReplicaID]EventID
 	lock    *sync.Mutex
 
-	cleanCopies map[uint64]*EventNode
-	cleanLock   *sync.Mutex
+	latestClocks map[ReplicaID]ClockValue
+	clockLock    *sync.Mutex
+	replicaStore *ReplicaStore
 }
 
-func NewEventDag() *EventDAG {
-	return &EventDAG{
-		nodes:   make(map[uint64]*EventNode),
-		strands: make(map[ReplicaID]uint64),
-		latest:  make(map[ReplicaID]uint64),
+func NewEventDag(replicaStore *ReplicaStore) *EventDAG {
+	d := &EventDAG{
+		nodes:   make(map[EventID]*EventNode),
+		strands: make(map[ReplicaID]EventID),
+		latest:  make(map[ReplicaID]EventID),
 		lock:    new(sync.Mutex),
 
-		cleanCopies: make(map[uint64]*EventNode),
-		cleanLock:   new(sync.Mutex),
+		latestClocks: make(map[ReplicaID]ClockValue),
+		replicaStore: replicaStore,
+		clockLock:    new(sync.Mutex),
 	}
+	for _, r := range replicaStore.Iter() {
+		d.latestClocks[r.ID] = ZeroClock(replicaStore.Cap())
+	}
+	return d
 }
 
-func (d *EventDAG) GetNode(eid uint64) (*EventNode, bool) {
+func (d *EventDAG) nextClock(e *EventNode, parents []*EventNode) ClockValue {
+	next := make([]float64, d.replicaStore.Cap())
+	d.clockLock.Lock()
+	latestClockValue := d.latestClocks[e.Event.Replica]
+	d.clockLock.Unlock()
+	for i, r := range d.replicaStore.Iter() {
+		maxParent := float64(0)
+		for _, p := range parents {
+			if p.ClockValue[i] > maxParent {
+				maxParent = p.ClockValue[i]
+			}
+		}
+		if r.ID == e.Event.Replica && maxParent < latestClockValue[i]+1 {
+			maxParent = latestClockValue[i] + 1
+		}
+		next[i] = maxParent
+	}
+	d.clockLock.Lock()
+	d.latestClocks[e.Event.Replica] = next
+	d.clockLock.Unlock()
+	return ClockValue(next)
+}
+
+func (d *EventDAG) GetNode(eid EventID) (*EventNode, bool) {
 	d.lock.Lock()
 	defer d.lock.Unlock()
 
 	node, ok := d.nodes[eid]
 	return node, ok
-}
-
-func (d *EventDAG) Clone() *EventDAG {
-	nodes := make(map[uint64]*EventNode)
-	d.lock.Lock()
-	defer d.lock.Unlock()
-	for nid, node := range d.nodes {
-		nodes[nid] = node.Clone()
-	}
-	return &EventDAG{
-		nodes:       nodes,
-		strands:     d.strands,
-		latest:      d.latest,
-		lock:        new(sync.Mutex),
-		cleanCopies: make(map[uint64]*EventNode),
-		cleanLock:   new(sync.Mutex),
-	}
 }
 
 func (d *EventDAG) AddNode(e *Event, parents []*Event) {
@@ -220,77 +251,19 @@ func (d *EventDAG) AddNode(e *Event, parents []*Event) {
 	d.latest[e.Replica] = e.ID
 
 	node.AddParents(parentNodes)
+	node.SetClock(d.nextClock(node, parentNodes))
 
 	_, ok = d.strands[e.Replica]
 	if !ok {
 		d.strands[e.Replica] = e.ID
 	}
-}
-
-func (d *EventDAG) markDirty(n *EventNode) {
-	d.cleanLock.Lock()
-	d.cleanCopies[n.Event.ID] = n.Clone()
-	d.cleanLock.Unlock()
-	n.MarkDirty()
-}
-
-func (d *EventDAG) AddDirty(e *Event, parents []*Event) {
-	parentNodes := make([]*EventNode, len(parents))
-	d.lock.Lock()
-	defer d.lock.Unlock()
-	for _, p := range parents {
-		pN, ok := d.nodes[p.ID]
-		if ok {
-			parentNodes = append(parentNodes, pN)
-			d.markDirty(pN)
-		}
-	}
-	node := NewEventNode(e)
-	node.MarkDirty()
-
-	l, ok := d.latest[e.Replica]
-	if ok {
-		lN := d.nodes[l]
-		lN.SetNext(e.ID)
-		node.SetPrev(lN.Event.ID)
-		parentNodes = append(parentNodes, lN)
-		d.markDirty(lN)
-	}
-	d.latest[e.Replica] = e.ID
-
-	node.AddParents(parentNodes)
-	_, ok = d.strands[e.Replica]
-	if !ok {
-		d.strands[e.Replica] = e.ID
-	}
-}
-
-func (d *EventDAG) Clean() {
-	dirtyNodes := make([]uint64, 0)
-	d.lock.Lock()
-	for id, node := range d.nodes {
-		if node.IsDirty() {
-			dirtyNodes = append(dirtyNodes, id)
-		}
-	}
-	d.lock.Unlock()
-	d.cleanLock.Lock()
-	for _, dID := range dirtyNodes {
-		if cleanCopy, ok := d.cleanCopies[dID]; ok {
-			d.nodes[dID] = cleanCopy
-			delete(d.cleanCopies, dID)
-		} else {
-			delete(d.nodes, dID)
-		}
-	}
-	d.cleanLock.Unlock()
 }
 
 func (d *EventDAG) MarshalJSON() ([]byte, error) {
 	d.lock.Lock()
 	defer d.lock.Unlock()
 	keyvals := make(map[string]interface{})
-	nodes := make(map[uint64]*EventNode, len(d.nodes))
+	nodes := make(map[EventID]*EventNode, len(d.nodes))
 
 	for id, node := range d.nodes {
 		nodes[id] = node
